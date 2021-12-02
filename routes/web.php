@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\controllers\AdminController;
 use App\Http\controllers\Backend\HostelController;
 use App\Http\controllers\Backend\StudentController;
-use App\Http\controllers\Backend\StaffController;
 use App\Http\controllers\Backend\roombookingController;
 use App\Http\controllers\Backend\manageroomController;
 use App\Http\controllers\Backend\mealController;
@@ -12,6 +11,7 @@ use App\Http\controllers\Backend\visitorController;
 use App\Http\controllers\Backend\paymentController;
 use App\Http\controllers\Backend\noticeController;
 use App\Http\controllers\Backend\reportController;
+use App\Http\Controllers\Backend\EmployeeController;
 
 
 
@@ -42,11 +42,10 @@ Route::post('/admin/store',[AdminController::class,'store'])->name('admin.store'
 
 
 Route::get('/admin/admin',[AdminController::class,'adminpart'])->name('admin.hosteladmin');
-Route::get('/admin/student',[StudentController::class,'student'])->name('admin.student');
+// Route::get('/admin/student',[StudentController::class,'student'])->name('admin.student');
 
+//student information
 
-Route::get('/admin/staff',[StaffController::class,'staff'])->name('admin.staff');
-Route::get('/admin/staff/form',[StaffController::class,'staffform'])->name('admin.staff.form');
 
 
 
@@ -63,5 +62,7 @@ Route::get('/admin/report',[reportController::class,'report'])->name('admin.repo
 Route::post('/hostelinformation/store',[HostelController::class,'store'])->name('hostelinformation.store');
 Route::get('/admin/hostel',[HostelController::class,'hostel'])->name('admin.hostel');
 
-
-
+// employee
+Route::get('/admin/employee/list',[EmployeeController::class,'employeelist'])->name('admin.employee');
+Route::get('/admin/employee/form',[EmployeeController::class,'employeeform'])->name('employee.form');
+Route::post('/employee/store',[EmployeeController::class,'store'])->name('employee.store');

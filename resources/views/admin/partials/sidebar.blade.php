@@ -11,13 +11,13 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Admin
                             </a>
-                            <a class="nav-link" href="{{route('admin.student')}}">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Student
-                            </a>
-                            <a class="nav-link" href="{{route('admin.staff')}}">
+                             </a>
+                            <a class="nav-link" href="{{route('admin.employee')}}"
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Staff
+                                Employee
                             </a>
 
                             <a class="nav-link" href="{{route('admin.hostel_information')}}">
