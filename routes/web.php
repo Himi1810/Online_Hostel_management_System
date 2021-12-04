@@ -35,16 +35,26 @@ use App\Http\Controllers\Backend\EmployeeController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/admin',[AdminController::class,'hostel']);
+Route::get('/admin',[AdminController::class,'dashboard'])->name('dashboard');
 Route::get('/admin/hostel_information',[HostelController::class,'hostel_info'])->name('admin.hostel_information');
-Route::get('/admin/admin_create',[AdminController::class,'admin_create'])->name('admin.create');
-Route::post('/admin/store',[AdminController::class,'store'])->name('admin.store');
+
+//admin
+Route::get('/admin/list',[AdminController::class,'adminlist'])->name('admin.admin');
+Route::get('/admin/form',[AdminController::class,'adminform'])->name('admin.form');
+Route::post('/admin/store/info',[AdminController::class,'store'])->name('admin.store');
 
 
-Route::get('/admin/admin',[AdminController::class,'adminpart'])->name('admin.hosteladmin');
-// Route::get('/admin/student',[StudentController::class,'student'])->name('admin.student');
+//Route::get('/admin/admin',[AdminController::class,'adminpart'])->name('admin.hosteladmin');
 
-//student information
+//student
+Route::get('/admin/student/list',[StudentController::class,'studentlist'])->name('admin.student');
+Route::get('/admin/student/form',[StudentController::class,'studentform'])->name('student.form');
+Route::post('/student/store',[StudentController::class,'store'])->name('student.store');
+
+
+
+
+
 
 
 

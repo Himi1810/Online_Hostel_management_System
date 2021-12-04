@@ -1,9 +1,9 @@
 @extends('admin.master')
 
 @section('main')
-<a href="#" class="btn btn-primary">Add</a>
-<table class="table caption-top">
-  <caption>List of users</caption>
+<h1>Admin List</h1>
+<a href="{{route('admin.form')}}" class="btn btn-success">Admin Info</a>
+<table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -19,24 +19,8 @@
       <td>Otto</td>
       <td>@mdo</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    
   </tbody>
 </table>
-
-
-
-
-
 
 @endsection

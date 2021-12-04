@@ -17,7 +17,7 @@ class EmployeeController extends Controller
     public function store(Request $request){
         Employee::create([
             'name'=>$request->name,
-            'nid'=>$request->phone_number,
+            'nid'=>$request->nid,
 
             'phone_number'=>$request->phone_number,
 

@@ -1,30 +1,37 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Model\admin;
+use App\Model\Admin;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function hostel()
+    public function dashboard()
     {
-        return view('admin.master');
+        return view('admin.dashboard');
     }
-    public function adminpart(){
-        return view('admin.layouts.admin');
+
+    public function adminlist(){
+        return view('admin.layouts.admin_list');
+
+    }
+
+    public function adminform(){
+        return view('admin.layouts.admin_form');
     }
     
 
     
-        // public function store(Request $request){
-        //         admin::create([ 
-        //     'name'=>$request->name,
-        //     'id'=>$request->id,
-        //     'phn_no'=>$request->phn_no,
-        //     'address'=>$request->address,
-        //     'email'=>$request->email 
-        // ]);
-        // return redirect()->back();
+        public function store(Request $request){
+               admin::create([ 
+                'name'=>$request->name,
+                'nid'=>$request->phone_number,
+    
+                'phone_number'=>$request->phone_number,
+    
+         ]);
+
+    return redirect()->back();
     }
     
-
+}
