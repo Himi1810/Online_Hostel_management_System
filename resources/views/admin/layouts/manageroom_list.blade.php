@@ -5,6 +5,7 @@
 
       <div class="container-fluid px-4">
           <h1 class="mt-4">Student List</h1>
+          <a href="{{route('admin.manageroomform')}}" class="btn btn-success" style="float:right;">Manage Room</a>
           <ol class="breadcrumb mb-4">
               <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
               <li class="breadcrumb-item active">Tables</li>
@@ -15,7 +16,7 @@
                   DataTable
               </div>
               <div>
-                <a href="{{route('student.form')}}" class="btn btn-success">Add new</a>
+                
               </div>
               <div class="card-body">
                   <table id="datatablesSimple">

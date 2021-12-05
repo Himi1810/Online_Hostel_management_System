@@ -36,10 +36,15 @@ use App\Http\Controllers\Backend\EmployeeController;
 //     return view('welcome');
 // });
 Route::get('/admin',[AdminController::class,'dashboard'])->name('dashboard');
-Route::get('/admin/hostel_information',[HostelController::class,'hostel_info'])->name('admin.hostel_information');
+//hostel
+Route::get('/admin/hostel_information/list',[HostelController::class,'hostel_infolist'])->name('admin.hostel_informationlist');
+Route::get('/admin/hostel_information/form',[HostelController::class,'hostel_infoform'])->name('admin.hostel_informationform');
+Route::post('/hostel/store/info',[AdminController::class,'store'])->name('hostel.store');
+
+
 
 //admin
-Route::get('/admin/list',[AdminController::class,'adminlist'])->name('admin.admin');
+Route::get('/admin/list',[AdminController::class,'adminlist'])->name('admin.list');
 Route::get('/admin/form',[AdminController::class,'adminform'])->name('admin.form');
 Route::post('/admin/store/info',[AdminController::class,'store'])->name('admin.store');
 
@@ -52,6 +57,37 @@ Route::get('/admin/student/form',[StudentController::class,'studentform'])->name
 Route::post('/student/store',[StudentController::class,'store'])->name('student.store');
 
 
+//roombooking
+Route::get('/admin/roombooking/list',[RoombookingController::class,'roombookinglist'])->name('admin.roombooking');
+Route::get('/admin/roombooking/form',[RoombookingController::class,'roombookingform'])->name('roombooking.form');
+Route::post('/roombooking/store',[RoombookingController::class,'store'])->name('roombooking.store');
+
+
+
+
+
+//manageroom
+Route::get('/admin/manage-room',[ManageroomController::class,'manageroomlist'])->name('admin.manageroom');
+Route::get('/admin/manage-room-form',[ManageroomController::class,'manageroomform'])->name('admin.manageroomform');
+Route::post('/manage-room/store',[ManageroomController::class,'store'])->name('manageroom.store');
+
+
+
+
+//meal
+Route::get('/admin/meal/list',[MealController::class,'meallist'])->name('admin.meal');
+Route::get('/admin/meal/form',[MealController::class,'mealform'])->name('meal.form');
+Route::post('/meal/store',[MealController::class,'store'])->name('meal.store');
+
+
+
+
+
+
+//visitor
+Route::get('/admin/visitor/list',[VisitorController::class,'visitorlist'])->name('admin.visitor');
+Route::get('/admin/visitor/form',[VisitorController::class,'visitorform'])->name('visitor.form');
+Route::post('/visitor/store',[VisitorController::class,'store'])->name('visitor.store');
 
 
 
@@ -61,12 +97,26 @@ Route::post('/student/store',[StudentController::class,'store'])->name('student.
 
 
 
-Route::get('/admin/roombooking',[RoombookingController::class,'roombooking'])->name('admin.roombooking');
-Route::get('/admin/manageroom',[ManageroomController::class,'manageroom'])->name('admin.manageroom');
-Route::get('/admin/meal',[MealController::class,'meal'])->name('admin.meal');
-Route::get('/admin/visitor',[VisitorController::class,'visitor'])->name('admin.visitor');
-Route::get('/admin/payment',[PaymentController::class,'payment'])->name('admin.payment');
-Route::get('/admin/notice',[noticeController::class,'notice'])->name('admin.notice');
+//payment
+Route::get('/admin/payment/list',[PaymentController::class,'paymentlist'])->name('admin.payment');
+Route::get('/admin/payment/form',[PaymentController::class,'paymentform'])->name('payment.form');
+Route::post('/payment/store',[PaymentController::class,'store'])->name('payment.store');
+
+
+
+
+
+//notice
+Route::get('/admin/notice/list',[noticeController::class,'noticelist'])->name('admin.notice');
+Route::get('/admin/notice/form',[noticeController::class,'noticeform'])->name('notice.form');
+Route::post('/notice/store',[NoticeController::class,'store'])->name('Notice.store');
+
+
+
+
+
+
+//report
 Route::get('/admin/report',[reportController::class,'report'])->name('admin.report');
 
 Route::post('/hostelinformation/store',[HostelController::class,'store'])->name('hostelinformation.store');

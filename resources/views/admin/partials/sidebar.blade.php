@@ -9,7 +9,7 @@
                             </a>
                        
                             <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="{{route('admin.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Admin
                             </a>
@@ -17,17 +17,41 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Student
                             </a>
-                            <a class="nav-link" href="{{route('admin.student')}}">
+                            <a class="nav-link" href="{{route('admin.employee')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Student
+                                Employee
                             </a>
-                            <a class="nav-link" href="{{route('admin.student')}}">
+                            <a class="nav-link" href="{{route('admin.hostel_informationlist')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Student
+                                Hostel Information
                             </a>
-                            <a class="nav-link" href="{{route('admin.student')}}">
+                            <a class="nav-link" href="{{route('admin.manageroom')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Student
+                                Manage Room
+                            </a>
+                            <a class="nav-link" href="{{route('admin.roombooking')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Room Booking
+                            </a>
+                            <a class="nav-link" href="{{route('admin.payment')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Payment
+                            </a>
+                            <a class="nav-link" href="{{route('admin.meal')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Meal
+                            </a>
+                            <a class="nav-link" href="{{route('admin.visitor')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Visitor
+                            </a>
+                            <a class="nav-link" href="{{route('admin.notice')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Notice
+                            </a>
+                            <a class="nav-link" href="{{route('admin.report')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Report
                             </a>
                         </div>
                     </div>

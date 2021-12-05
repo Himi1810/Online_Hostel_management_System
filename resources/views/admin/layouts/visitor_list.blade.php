@@ -15,7 +15,7 @@
                   DataTable
               </div>
               <div>
-                <a href="{{route('student.form')}}" class="btn btn-success">Add new</a>
+                <a href="{{route('visitor.form')}}" class="btn btn-success">Add new</a>
               </div>
               <div class="card-body">
                   <table id="datatablesSimple">

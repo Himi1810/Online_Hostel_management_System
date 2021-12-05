@@ -8,20 +8,24 @@ use Illuminate\Http\Request;
 
 class HostelController extends Controller
 {
-    public function hostel_info()
+    public function hostel_infolist()
     {
-        $host=Hostel::all();
-        return view('admin.layouts.hostel_information',compact('host'));
+        $hostel = Hostel::all();
+        return view('admin.layouts.hostel_information_list',compact('hostel'));
     }
-    public function hostel()
+    public function hostel_infoform()
     {
-        return view('admin.partials.hostel');
+        return view('admin.layouts.hostel_information_form');
     }
     public function store(Request $request)
     {
         Hostel::create([
-            'email'=>$request->email,
-            'password'=>$request->password,
+            'number_of_rooms'=>$request->number_of_rooms,
+            'hostel_location'=>$request->hostel_location,
+            'hostel_type'=>$request->hostel_type,
+
+            'hostel_name'=>$request->hostel_name,
+
 
         ]);
         return redirect()->back(); 
