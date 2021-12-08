@@ -17,10 +17,13 @@ class ManageroomController extends Controller
 
     public function store(Request $request){
         Manageroom::create([
-            'name'=>$request->name,
-            'nid'=>$request->nid,
+            'room_name'=>$request->room_name,
+            'room_type'=>$request->room_type,
+            'room_fee'=>$request->room_fee,
+            'room_status'=>$request->room_status,
 
-            'phone_number'=>$request->phone_number,
+
+            
 
         ]);
         return redirect()->back(); 

@@ -14,10 +14,11 @@ class CreateManageroomsTable extends Migration
     public function up()
     {
         Schema::create('managerooms', function (Blueprint $table) {
+            $table->id();
             $table->string('room_name');
-            $table->string('room-allocation');
+           
             $table->string('room_type');
-            $table->string('room_description');
+            $table->string('room_status');
             $table->string('room_fee');
             $table->timestamps();
         });

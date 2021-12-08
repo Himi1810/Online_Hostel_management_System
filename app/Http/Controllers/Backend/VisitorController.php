@@ -20,9 +20,14 @@ class VisitorController extends Controller
     public function store(Request $request){
         Visitor::create([
             'name'=>$request->name,
-            'phone_number'=>$request->phone_number,
-
             'address'=>$request->address,
+            'phone_number'=>$request->phone_number,
+            'address'=>$request->address,
+            'nid'=>$request->nid,
+
+
+
+           
             
 
         

@@ -119,8 +119,8 @@ Route::post('/notice/store',[NoticeController::class,'store'])->name('Notice.sto
 //report
 Route::get('/admin/report',[reportController::class,'report'])->name('admin.report');
 
-Route::post('/hostelinformation/store',[HostelController::class,'store'])->name('hostelinformation.store');
-Route::get('/admin/hostel',[HostelController::class,'hostel'])->name('admin.hostel');
+//Route::post('/hostelinformation/store',[HostelController::class,'store'])->name('hostelinformation.store');
+//Route::get('/admin/hostel',[HostelController::class,'hostel'])->name('admin.hostel');
 
 // employee
 Route::get('/admin/employee/list',[EmployeeController::class,'employeelist'])->name('admin.employee');
