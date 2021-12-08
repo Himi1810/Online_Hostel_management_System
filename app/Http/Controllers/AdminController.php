@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Model\Admin;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -25,9 +25,12 @@ class AdminController extends Controller
         public function store(Request $request){
                admin::create([ 
                 'name'=>$request->name,
-                'nid'=>$request->phone_number,
-    
+                'nid'=>$request->nid,
+                'address'=>$request->address,
+                'email'=>$request->email,
                 'phone_number'=>$request->phone_number,
+    
+            
     
          ]);
 

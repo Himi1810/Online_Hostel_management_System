@@ -39,7 +39,7 @@ Route::get('/admin',[AdminController::class,'dashboard'])->name('dashboard');
 //hostel
 Route::get('/admin/hostel_information/list',[HostelController::class,'hostel_infolist'])->name('admin.hostel_informationlist');
 Route::get('/admin/hostel_information/form',[HostelController::class,'hostel_infoform'])->name('admin.hostel_informationform');
-Route::post('/hostel/store/info',[AdminController::class,'store'])->name('hostel.store');
+Route::post('/hostel/store/info',[HostelController::class,'store'])->name('hostel.store');
 
 
 

@@ -17,7 +17,10 @@ class CreateAdminsTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('nid');
-            $table->integer('phone_number');
+            $table->string('phone_number');
+            $table->string('email');
+            $table->string('address');
+            $table->string('image')->nullable();
 
 
             $table->timestamps();

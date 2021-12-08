@@ -19,12 +19,13 @@ class HostelController extends Controller
     }
     public function store(Request $request)
     {
+        // dd($request->all());
         Hostel::create([
             'number_of_rooms'=>$request->number_of_rooms,
             'hostel_location'=>$request->hostel_location,
             'hostel_type'=>$request->hostel_type,
-
-            'hostel_name'=>$request->hostel_name,
+            'Total_rooms'=>$request->total_rooms,
+            'name_of_the_hostel'=>$request->name_of_the_hostel,
 
 
         ]);

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
-use App\Model\Student;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
@@ -20,10 +20,9 @@ class StudentController extends Controller
         Student::create([
             'name'=>$request->name,
             'nid'=>$request->nid,
-
+            'email' => $request->email,
             'phone_number'=>$request->phone_number,
             'address'=>$request->address,
-
         ]);
         return redirect()->back(); 
     }

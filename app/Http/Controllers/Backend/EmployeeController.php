@@ -18,7 +18,8 @@ class EmployeeController extends Controller
         Employee::create([
             'name'=>$request->name,
             'nid'=>$request->nid,
-
+            'email'=>$request->email,
+            'address'=>$request->address,
             'phone_number'=>$request->phone_number,
 
         ]);

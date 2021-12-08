@@ -14,10 +14,12 @@ class CreateHostelsTable extends Migration
     public function up()
     {
         Schema::create('hostels', function (Blueprint $table) {
+            $table->id();
             $table->string('number_of_rooms');
             $table->string('hostel_location');
             $table->string('hostel_type');
-            $table->string('hostel_name');
+            $table->string('name_of_the_hostel');
+            $table->string('Total_rooms');
            
             $table->timestamps();
         });
