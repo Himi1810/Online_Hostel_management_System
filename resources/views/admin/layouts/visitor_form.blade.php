@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('main')
 
-<form action="{{route('employee.store')}}"method='post' enctype=" multipart/form-data">
+<form action="{{route('visitor.store')}}"method='post' enctype=" multipart/form-data">
     @csrf
 
     <div class="mb-3">

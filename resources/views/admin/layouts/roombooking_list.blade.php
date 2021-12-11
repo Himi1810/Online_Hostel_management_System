@@ -4,7 +4,7 @@
 
 
       <div class="container-fluid px-4">
-          <h1 class="mt-4">Employee List</h1>
+          <h1 class="mt-4">Room Booking</h1>
           <a href="{{route('roombooking.form')}}" class="btn btn-success" style="float:right;">Add new</a>
           <ol class="breadcrumb mb-4">
               <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>

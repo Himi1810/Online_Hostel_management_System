@@ -109,7 +109,7 @@ Route::post('/payment/store',[PaymentController::class,'store'])->name('payment.
 //notice
 Route::get('/admin/notice/list',[noticeController::class,'noticelist'])->name('admin.notice');
 Route::get('/admin/notice/form',[noticeController::class,'noticeform'])->name('notice.form');
-Route::post('/notice/store',[NoticeController::class,'store'])->name('Notice.store');
+Route::post('/notice/store',[NoticeController::class,'store'])->name('notice.store');
 
 
 

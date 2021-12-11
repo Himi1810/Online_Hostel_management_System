@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
-use App\Model\Payment;
+use App\Models\Payment;
 use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
     public function paymentlist(){
+       
+
         return view('admin.layouts.payment_list');
     }
 
@@ -24,6 +26,8 @@ class PaymentController extends Controller
             'amount'=>$request->amount,
             'payment_date'=>$request->payment_date,
             'payment_status'=>$request->payment_status,
+            'payment_method'=>$request->payment_method,
+
 
 
         

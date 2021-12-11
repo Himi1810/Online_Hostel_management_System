@@ -20,8 +20,7 @@ class ManageroomController extends Controller
             'room_name'=>$request->room_name,
             'room_type'=>$request->room_type,
             'room_fee'=>$request->room_fee,
-            'room_status'=>$request->room_status,
-
+           
 
             
 

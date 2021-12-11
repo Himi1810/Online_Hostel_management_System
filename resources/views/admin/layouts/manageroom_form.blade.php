@@ -5,12 +5,22 @@
     @csrf
 
     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter Your Room Number</label>
-    <input type="number" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Student ID</label>
+    <input type="number" name="student_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+
+    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Room Name</label>
+    <input type="text" name="room_name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter Your Room Number </label>
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Room Type </label>
+    <input type="text" name="room_type" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Room fee </label>
+    <input type="number" name="room_fee" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
   <div class="form-group">

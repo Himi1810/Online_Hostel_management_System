@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 class EmployeeController extends Controller
 {
     public function employeelist(){
-        return view('admin.layouts.employee_list');
+        $employees = Employee::all();
+        // dd($employees);
+        return view('admin.layouts.employee_list',compact('employees'));
     }
     public function employeeform(){
         return view('admin.layouts.employee_form');

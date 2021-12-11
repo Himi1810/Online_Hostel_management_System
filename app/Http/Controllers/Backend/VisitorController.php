@@ -24,6 +24,7 @@ class VisitorController extends Controller
             'phone_number'=>$request->phone_number,
             'address'=>$request->address,
             'nid'=>$request->nid,
+            'relation'=>$request->relation,
 
 
 

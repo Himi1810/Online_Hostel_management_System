@@ -17,6 +17,7 @@ class CreateMealsTable extends Migration
             $table->id();
             $table->string('meal_catagory');
             $table->string('meal_fee');
+            $table->string('meal_history');
             
             $table->timestamps();
         });

@@ -18,9 +18,10 @@ class MealController extends Controller
     }
 
     public function store(Request $request){
-        Manageroom::create([
+        Meal::create([
             'meal_catagory'=>$request->meal_catagory,
             'meal_fee'=>$request->meal_fee,
+            'meal_history'=>$request->meal_history,
 
             
 

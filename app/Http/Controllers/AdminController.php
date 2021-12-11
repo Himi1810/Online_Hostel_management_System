@@ -12,7 +12,9 @@ class AdminController extends Controller
     }
 
     public function adminlist(){
-        return view('admin.layouts.admin_list');
+        $admins = Admin::all();
+        // dd($admins);
+        return view('admin.layouts.admin_list',compact('admins'));
 
     }
 

@@ -18,7 +18,7 @@ class CreateManageroomsTable extends Migration
             $table->string('room_name');
            
             $table->string('room_type');
-            $table->string('room_status');
+            
             $table->string('room_fee');
             $table->timestamps();
         });
