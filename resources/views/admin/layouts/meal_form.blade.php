@@ -10,8 +10,8 @@
   </div>
 
     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter Your Meal Catagory</label>
-    <input type="text" name="meal_catagory" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Meal Category</label>
+    <input type="text" name="meal_category" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Meal Fee </label>

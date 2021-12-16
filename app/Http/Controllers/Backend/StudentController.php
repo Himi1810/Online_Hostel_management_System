@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 class StudentController extends Controller
 {
     public function studentlist(){
-        return view('admin.layouts.student_list');
+        $students = student::all();
+        // dd($students);
+        return view('admin.layouts.student_list',compact('students'));
     }
 
     public function studentform(){

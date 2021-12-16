@@ -10,7 +10,9 @@ use Illuminate\Http\Request;
 class VisitorController extends Controller
 {
     public function visitorlist(){
-        return view('admin.layouts.visitor_list');
+        $visitors = Visitor::all();
+        // dd($visitors);
+        return view('admin.layouts.visitor_list',compact('visitors'));
     }
 
     public function visitorform(){
@@ -22,7 +24,7 @@ class VisitorController extends Controller
             'name'=>$request->name,
             'address'=>$request->address,
             'phone_number'=>$request->phone_number,
-            'address'=>$request->address,
+            
             'nid'=>$request->nid,
             'relation'=>$request->relation,
 

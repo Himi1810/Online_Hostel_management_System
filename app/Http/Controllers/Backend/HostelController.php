@@ -11,6 +11,7 @@ class HostelController extends Controller
     public function hostel_infolist()
     {
         $hostel = Hostel::all();
+         // dd($hostels);
         return view('admin.layouts.hostel_information_list',compact('hostel'));
     }
     public function hostel_infoform()

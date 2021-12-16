@@ -9,7 +9,9 @@ use Illuminate\Http\Request;
 class RoombookingController extends Controller
 {
     public function roombookinglist(){
-        return view('admin.layouts.roombooking_list');
+        $roombookings = Roombooking::all();
+        // dd($roombookings);
+        return view('admin.layouts.roombooking_list',compact('roombookings'));
     }
 
     public function roombookingform(){

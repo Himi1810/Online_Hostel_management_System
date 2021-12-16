@@ -23,11 +23,11 @@
                       <thead>
                           <tr>
                               <th>Name</th>
-                              <th>Position</th>
-                              <th>Office</th>
-                              <th>Age</th>
-                              <th>Start date</th>
-                              <th>Salary</th>
+                              <th>Nid</th>
+                              <th>Phone Number</th>
+                              <th>Email</th>
+                              <th>Address</th>
+                              <th>Image</th>
                           </tr>
                       </thead>
                      

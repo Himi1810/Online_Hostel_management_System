@@ -10,7 +10,9 @@ use Illuminate\Http\Request;
 class MealController extends Controller
 {
     public function meallist(){
-        return view('admin.layouts.meal_list');
+        $meals = Meal::all();
+        // dd($meals);
+        return view('admin.layouts.meal_list',compact('meals'));
     }
 
     public function mealform(){
@@ -19,7 +21,7 @@ class MealController extends Controller
 
     public function store(Request $request){
         Meal::create([
-            'meal_catagory'=>$request->meal_catagory,
+            'meal_catagory'=>$request->meal_category,
             'meal_fee'=>$request->meal_fee,
             'meal_history'=>$request->meal_history,
 
