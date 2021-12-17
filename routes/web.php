@@ -32,9 +32,9 @@ use App\Http\Controllers\Backend\EmployeeController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('website.pages.home');
+});
 Route::get('/admin',[AdminController::class,'dashboard'])->name('dashboard');
 //hostel
 Route::get('/admin/hostel_information/list',[HostelController::class,'hostel_infolist'])->name('admin.hostel_informationlist');
