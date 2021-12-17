@@ -11,8 +11,8 @@
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#registration">Registration</a></li>
-          <li><a class="nav-link scrollto" href="#log in">Log In</a></li>
+          <li><a class="nav-link scrollto" href="{{route('user.registration')}}">Registration</a></li>
+          <li><a class="nav-link scrollto" href="{{route('user.login')}}">Log In</a></li>
           
          
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>

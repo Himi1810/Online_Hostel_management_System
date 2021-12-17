@@ -12,6 +12,7 @@ use App\Http\controllers\Backend\paymentController;
 use App\Http\controllers\Backend\noticeController;
 use App\Http\controllers\Backend\reportController;
 use App\Http\Controllers\Backend\EmployeeController;
+use App\Http\Controllers\Frontend\LoginController;
 
 
 
@@ -126,3 +127,9 @@ Route::get('/admin/report',[reportController::class,'report'])->name('admin.repo
 Route::get('/admin/employee/list',[EmployeeController::class,'employeelist'])->name('admin.employee');
 Route::get('/admin/employee/form',[EmployeeController::class,'employeeform'])->name('employee.form');
 Route::post('/employee/store',[EmployeeController::class,'store'])->name('employee.store');
+
+
+
+// website part
+Route::get('/user/registration',[LoginController::class,'registrationform'])->name('user.registration');
+Route::get('/user/login',[LoginController::class,'login'])->name('user.login');
