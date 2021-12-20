@@ -26,7 +26,8 @@
                               <th>Amount</th>
                               <th>Payment Date</th>
                               <th>payment Status</th>
-                              <th>payment Method</th>
+                              <th>Action</th>
+                        
                               
                           </tr>
                       </thead>
@@ -39,6 +40,10 @@
                               <td>{{$payment->payment_date}}</td>
                               <td>{{$payment->payment_status}}</td>
                               <td>{{$payment->payment_method}}</td>
+                              <td>
+                              <a class="btn btn-primary" href="{{route('payment.view',$payment->id)}}">View</a>
+
+                              </td>
                               
                           </tr>
                           @endforeach

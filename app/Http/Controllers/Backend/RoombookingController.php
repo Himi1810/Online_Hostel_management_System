@@ -31,4 +31,21 @@ class RoombookingController extends Controller
         ]);
         return redirect()->back(); 
     }
+
+    public function roombooking_view($id){
+        $roombooking=Roombooking::find($id);
+
+        return view('admin.layouts.roombooking_view',compact('roombooking'));
+    }
+
+    public function roombooking_delete($id){
+        $roombooking=Roombooking::find($id);
+            // dd($roombooking);
+              if($roombooking){
+                      $roombooking->delete();
+
+                      
+             return redirect()->back();
+}
+    }
 }

@@ -27,6 +27,7 @@
                               <th>Booking Date</th>
                               <th>Room Status</th>
                               <th>Room Fee</th>
+                              <th>Action</th>
                               
                           </tr>
                       </thead>
@@ -39,6 +40,12 @@
                               <td>{{$roombooking->booking_date}}</td>
                               <td>{{$roombooking->room_status}}</td>
                               <td>{{$roombooking->room_fee}}</td>
+                              <td>
+                              <a class="btn btn-primary" href="{{route('roombooking.view',$roombooking->id)}}">View</a>
+                              <a class="btn btn-danger"  href="{{route('roombooking.delete',$roombooking->id)}}">Delete</a>
+
+
+                              </td>
                               
                           </tr>
                           @endforeach

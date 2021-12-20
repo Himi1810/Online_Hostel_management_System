@@ -33,4 +33,23 @@ class HostelController extends Controller
         return redirect()->back(); 
 
     }
+
+
+    public function hostel_information_view($id){
+        $hostel=Hostel::find($id);
+
+        return view('admin.layouts.hostel_information_view',compact('hostel'));
+    }
+
+    public function hostel_information_delete($id){
+        $hostel=Hostel::find($id);
+        
+            //  dd($employee);
+              if($hostel){
+                      $hostel->delete();
+
+                      
+             return redirect()->back();
+}
+    }
 }

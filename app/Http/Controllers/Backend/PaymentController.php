@@ -37,4 +37,10 @@ class PaymentController extends Controller
         ]);
         return redirect()->back(); 
 }
+
+public function payment_view($id){
+    $payment=Payment::find($id);
+
+    return view('admin.layouts.payment_view',compact('payment'));
+}
 }

@@ -10,7 +10,7 @@
       <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background-image: {{url('website/assets/img/slide/slide-1.jpg')}}">
+        <div class="carousel-item active" style="background-image:url('website/assets/img/slide/slide-4.jpg')">
           <div class="carousel-container">
             <div class="container">
               <h2 class="animate__animated animate__fadeInDown"><span>Welcome To Online Hostel Management System</span></h2>
@@ -124,7 +124,7 @@
     </section><!-- End Why Us Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
+    <!-- <section id="services" class="services">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -184,7 +184,7 @@
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>End Services Section -->
 
     
     

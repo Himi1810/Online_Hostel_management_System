@@ -28,6 +28,7 @@
                               <th>Email</th>
                               <th>Address</th>
                               <th>Image</th>
+                              <th>Action</th>
                           </tr>
                       </thead>
                      
@@ -40,8 +41,15 @@
                               <td>{{$admin->email}}</td>
                               <td>{{$admin->address}}</td>
                               <td>
-                                  <img src="{{url(''.$admin->image)}}" alt="">
+                                  <img width="100px" src="{{url('/uploads/admin/'.$admin->image)}}" alt="">
+
                               </td>
+                              <td>
+                              <a class="btn btn-primary" href="{{route('admin.view',$admin->id)}}">View</a>
+                              <a class="btn btn-danger"  href="{{route('admin.delete',$admin->id)}}">Delete</a>
+
+                              </td>
+                                  
                           </tr>
                           @endforeach
                       </tbody>

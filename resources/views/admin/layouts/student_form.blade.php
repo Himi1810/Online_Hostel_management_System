@@ -1,6 +1,6 @@
 @extends('admin.master')
 @section('main')
-<form action="{{route('student.store')}}"method='post' enctype=" multipart/form-data">
+<form action="{{route('student.store')}}"method='post' enctype="multipart/form-data">
     @csrf
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Name</label>

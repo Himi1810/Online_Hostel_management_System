@@ -29,4 +29,21 @@ class ManageroomController extends Controller
         ]);
         return redirect()->back(); 
 }
+
+public function manageroom_view($id){
+    $manageroom=Manageroom::find($id);
+
+    return view('admin.layouts.manageroom_view',compact('manageroom'));
+}
+
+public function manageroom_delete($id){
+    $manageroom=Manageroom::find($id);
+        // dd($manageroom);
+          if($manageroom){
+                  $manageroom->delete();
+
+                  
+         return redirect()->back();
+}
+}
 }

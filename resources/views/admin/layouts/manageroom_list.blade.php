@@ -25,6 +25,7 @@
                               <th>Room Name</th>
                               <th>Room Type</th>
                               <th>Room Fee</th>
+                              <th>Action</th>
                              
                              
                           </tr>
@@ -36,6 +37,11 @@
                               <td>{{$manageroom->room_name}}</td>
                               <td>{{$manageroom->room_type}}</td>
                               <td>{{$manageroom->room_fee}}</td>
+                              <td>
+                              <a class="btn btn-primary" href="{{route('manageroom.view',$manageroom->id)}}">View</a>
+                              <a class="btn btn-danger"  href="{{route('manageroom.delete',$manageroom->id)}}">Delete</a>
+
+                              </td>
                               
                               
                           </tr>

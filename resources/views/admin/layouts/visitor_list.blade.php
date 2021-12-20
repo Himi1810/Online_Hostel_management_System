@@ -41,7 +41,7 @@
                               <td>{{$visitor->relation}}</td>
                               <td>{{$visitor->address}}</td>
                               <td>
-                                  <img src="{{url(''.$visitor->image)}}" alt="">
+                              <img width="100px" src="{{url('/uploads/visitor/'.$visitor->image)}}" alt="">
                               </td>
                              
                           </tr>

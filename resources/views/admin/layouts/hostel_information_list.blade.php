@@ -27,11 +27,13 @@
                               <th>Hostel Type</th>
                               <th>Total Rooms</th>
                               <th>Name of the Hostel</th>
+                              <th>Action</th>
                              
                           </tr>
                       </thead>
                      
                       <tbody>
+                          
                       @foreach($hostel as $hostel)
                           <tr>
                               <td>{{$hostel->number_of_rooms}}</td>
@@ -39,6 +41,11 @@
                               <td>{{$hostel->hostel_type}}</td>
                               <td>{{$hostel->total_rooms}}</td>
                               <td>{{$hostel->name_of_the_hostel}}</td>
+                              <td>
+                                  <a class="btn btn-primary" href="{{route('admin.hostel_informationview',$hostel->id)}}">View</a>
+                                  <a class="btn btn-danger"  href="{{route('admin.hostel_informationdelete',$hostel->id)}}">Delete</a>
+
+                              </td>
                               
                           </tr>
                           @endforeach

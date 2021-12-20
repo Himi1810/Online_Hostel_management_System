@@ -28,6 +28,7 @@
                               <th>Email</th>
                               <th>Address</th>
                               <th>Image</th>
+                              <th>Action</th>
                           </tr>
                       </thead>
                      
@@ -40,7 +41,11 @@
                               <td>{{$student->email}}</td>
                               <td>{{$student->address}}</td>
                               <td>
-                                  <img src="{{url(''.$student->image)}}" alt="">
+                                  <img width="100px" src="{{url('/uploads/student/'.$student->image)}}" alt="">
+                              </td>
+                              <td>
+                              <a class="btn btn-primary" href="{{route('student.view',$student->id)}}">View</a>
+                              <a class="btn btn-danger"  href="{{route('student.delete',$student->id)}}">Delete</a>
                               </td>
                           </tr>
                           @endforeach
