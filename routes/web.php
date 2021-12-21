@@ -16,6 +16,8 @@ use App\Http\Controllers\Frontend\LoginController;
 use App\Http\Controllers\Frontend\ServicesController;
 use App\Http\Controllers\Frontend\AboutController;
 use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\Frontend\RequestController;
+
 
 use App\Http\Controllers\Backend\DashboardController;
 
@@ -51,6 +53,12 @@ Route::get('about',[AboutController::class,'about'])->name('website.about');
 
 //contact
 Route::get('contact',[ContactController::class,'contact'])->name('website.contact');
+
+//requestform
+Route::get('request',[RequestController::class,'request'])->name('website.request');
+Route::get('/website/request/form',[RequestController::class,'requestform'])->name('website.form');
+Route::post('/request/store',[RequestController::class,'store'])->name('request.store');
+
 
 
 
@@ -166,7 +174,7 @@ Route::get('/admin/employee/delete/{id}',[EmployeeController::class,'employee_de
 
 
 
-// website part
+// Registration  part
 Route::get('/user/registration',[LoginController::class,'registrationform'])->name('user.registration');
 Route::post('/registration/store',[LoginController::class,'store'])->name('registration.store');
 
@@ -174,6 +182,24 @@ Route::get('/user/login',[LoginController::class,'loginform'])->name('user.login
 Route::post('login/store',[LoginController::class,'dologin'])->name('login.dologin');
 Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
 
+
+Route::group(['prefix'=>'admin'],function (){
+
+    Route::get('/admin/login',[AdminController::class,'login'])->name('admin.login');
+    Route::post('/admin/do/login',[AdminController::class,'dologin'])->name('admin.dologin');
+
+    Route::group(['middleware'=>'auth'],function (){
+        Route::get('/admin', function (){
+            return view('/admin.partials.dashboard');
+        })->name('admin.home');
+
+        Route::get('admin/logout',[AdminController::class,'logout'])->name('admin.logout');
+
+
+
+
+
+})
 
 
 //dashboard

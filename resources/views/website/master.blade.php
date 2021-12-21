@@ -42,10 +42,13 @@
    @include('website.partials.header')
 
   <!-- ======= Hero Section ======= -->
- 
+  <main id="main">
+
    @yield('contents')
   <!-- ======= Footer ======= -->
- 
+  </main><!-- End #main -->
+
+
   @include('website.partials.footer')
 
   

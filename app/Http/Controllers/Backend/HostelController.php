@@ -44,7 +44,7 @@ class HostelController extends Controller
     public function hostel_information_delete($id){
         $hostel=Hostel::find($id);
         
-            //  dd($employee);
+            //  dd($hostel);
               if($hostel){
                       $hostel->delete();
 

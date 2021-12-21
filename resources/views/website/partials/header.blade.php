@@ -20,7 +20,8 @@
           <li><a class="nav-link scrollto" href="{{route('user.login')}}">Log In</a></li>
           @endif
 
-          
+          <li><a class="nav-link scrollto" href="{{route('website.form')}}">Request</a></li>
+
          
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         

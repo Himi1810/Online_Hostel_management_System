@@ -49,6 +49,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Notice
                             </a>
+                            <a class="nav-link" href="{{route('website.request')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                Request
+                            </a>
                             <a class="nav-link" href="{{route('admin.report')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Report

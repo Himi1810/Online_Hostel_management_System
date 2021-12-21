@@ -22,7 +22,7 @@ class PaymentController extends Controller
 
     public function store(Request $request){
         Payment::create([
-            'id'=>$request->id,
+            
             'student_id'=>$request->student_id,
 
             'amount'=>$request->amount,
