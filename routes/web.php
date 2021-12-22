@@ -1,25 +1,27 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\controllers\AdminController;
-use App\Http\controllers\Backend\HostelController;
-use App\Http\controllers\Backend\StudentController;
-use App\Http\controllers\Backend\roombookingController;
-use App\Http\controllers\Backend\manageroomController;
 use App\Http\controllers\Backend\mealController;
-use App\Http\controllers\Backend\visitorController;
-use App\Http\controllers\Backend\paymentController;
+use App\Http\Controllers\Backend\AdminController;
+use App\Http\controllers\Backend\HostelController;
 use App\Http\controllers\Backend\noticeController;
 use App\Http\controllers\Backend\reportController;
-use App\Http\Controllers\Backend\EmployeeController;
-use App\Http\Controllers\Frontend\LoginController;
-use App\Http\Controllers\Frontend\ServicesController;
 use App\Http\Controllers\Frontend\AboutController;
+use App\Http\Controllers\Frontend\LoginController;
+use App\Http\controllers\Backend\paymentController;
+use App\Http\controllers\Backend\StudentController;
+use App\Http\controllers\Backend\visitorController;
+use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Frontend\ContactController;
 use App\Http\Controllers\Frontend\RequestController;
-
-
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Frontend\ServicesController;
+use App\Http\controllers\Backend\manageroomController;
+use App\Http\controllers\Backend\roombookingController;
+
+
+
+use App\Http\Controllers\Backend\AdminController as AdminUserController; 
 
 
 
@@ -44,6 +46,10 @@ use App\Http\Controllers\Backend\DashboardController;
 Route::get('/', function () {
     return view('website.pages.home');
 });
+Route::get('/login', function () {
+    return view('admin.layouts.admin_form');
+});
+
 
 //services
 Route::get('service',[ServicesController::class,'services'])->name('website.services');
@@ -63,7 +69,26 @@ Route::post('/request/store',[RequestController::class,'store'])->name('request.
 
 
 //dashboard
-Route::get('/admin',[AdminController::class,'dashboard'])->name('dashboard');
+// Route::get('/admin',[AdminController::class,'dashboard'])->name('dashboard');
+
+//middleware
+// Route::get('/login-admin',[AdminUserController::class,'login'])->name('admin.login');
+// Route::post('/do_login',[AdminController::class,'dologin'])->name('do.login');
+
+Route::get('/login',[AdminController::class,'login'])->name('admin.login');
+Route::post('/admin/do/login',[AdminController::class,'dologin'])->name('admin.dologin');
+
+Route::group(['prefix'=>'admin'],function (){
+
+    Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('dashboard');
+
+    Route::group(['middleware'=>'auth'],function (){
+        Route::get('/admin', function (){
+            return view('master');
+        })->name('admin.home');
+
+        Route::get('admin/logout',[AdminController::class,'logout'])->name('admin.logout');
+
 
 //hostel
 Route::get('/admin/hostel_information/list',[HostelController::class,'hostel_infolist'])->name('admin.hostel_informationlist');
@@ -76,12 +101,13 @@ Route::get('/admin/hostel_information/delete/{id}',[HostelController::class,'hos
 
 
 //admin
-Route::get('/admin/list',[AdminController::class,'adminlist'])->name('admin.list');
-Route::get('/admin/form',[AdminController::class,'adminform'])->name('admin.form');
-Route::post('/admin/store/info',[AdminController::class,'store'])->name('admin.store');
-Route::get('/admin/view/{id}',[AdminController::class,'admin_view'])->name('admin.view');
-Route::get('/admin/delete/{id}',[AdminController::class,'admin_delete'])->name('admin.delete');
+// Route::get('/admin/list',[AdminController::class,'adminlist'])->name('admin.list');
+// Route::get('/admin/form',[AdminController::class,'adminform'])->name('admin.form');
+// Route::post('/admin/store/info',[AdminController::class,'store'])->name('admin.store');
+// Route::get('/admin/view/{id}',[AdminController::class,'admin_view'])->name('admin.view');
+// Route::get('/admin/delete/{id}',[AdminController::class,'admin_delete'])->name('admin.delete');
 
+//backendadmin
 
 
 //Route::get('/admin/admin',[AdminController::class,'adminpart'])->name('admin.hosteladmin');
@@ -183,25 +209,15 @@ Route::post('login/store',[LoginController::class,'dologin'])->name('login.dolog
 Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
 
 
-Route::group(['prefix'=>'admin'],function (){
-
-    Route::get('/admin/login',[AdminController::class,'login'])->name('admin.login');
-    Route::post('/admin/do/login',[AdminController::class,'dologin'])->name('admin.dologin');
-
-    Route::group(['middleware'=>'auth'],function (){
-        Route::get('/admin', function (){
-            return view('/admin.partials.dashboard');
-        })->name('admin.home');
-
-        Route::get('admin/logout',[AdminController::class,'logout'])->name('admin.logout');
 
 
-
-
-
-})
 
 
 //dashboard
 Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
 
+// admin form starts here
+// Route::get('/login-admin',[AdminController::class,'login'])->name('admin.login');
+// Route::post('/do_login',[AdminController::class,'login'])->name('do.login');
+    });
+});
