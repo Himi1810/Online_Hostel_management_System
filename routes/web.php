@@ -50,6 +50,9 @@ Route::get('/login', function () {
     return view('admin.layouts.admin_form');
 });
 
+//home
+Route::get('home',[HomeController::class,'home'])->name('website.home');
+
 
 //services
 Route::get('service',[ServicesController::class,'services'])->name('website.services');
@@ -112,12 +115,14 @@ Route::get('/admin/hostel_information/delete/{id}',[HostelController::class,'hos
 
 //Route::get('/admin/admin',[AdminController::class,'adminpart'])->name('admin.hosteladmin');
 
-//student
+//student;
 Route::get('/admin/student/list',[StudentController::class,'studentlist'])->name('admin.student');
 Route::get('/admin/student/form',[StudentController::class,'studentform'])->name('student.form');
 Route::post('/student/store',[StudentController::class,'store'])->name('student.store');
 Route::get('/admin/student/view/{id}',[StudentController::class,'student_view'])->name('student.view');
 Route::get('/admin/student/delete/{id}',[StudentController::class,'student_delete'])->name('student.delete');
+Route::get('/admin/student/edit/{id}',[StudentController::class,'student_edit'])->name('student.edit');
+
 
 
 
@@ -146,6 +151,9 @@ Route::get('/admin/manageroom/delete/{id}',[ManageroomController::class,'manager
 Route::get('/admin/meal/list',[MealController::class,'meallist'])->name('admin.meal');
 Route::get('/admin/meal/form',[MealController::class,'mealform'])->name('meal.form');
 Route::post('/meal/store',[MealController::class,'store'])->name('meal.store');
+Route::get('/admin/meal/view/{id}',[MealController::class,'meal_view'])->name('meal.view');
+Route::get('/admin/meal/delete/{id}',[MealController::class,'meal_delete'])->name('meal.delete');
+
 
 
 
@@ -156,6 +164,8 @@ Route::post('/meal/store',[MealController::class,'store'])->name('meal.store');
 Route::get('/admin/visitor/list',[VisitorController::class,'visitorlist'])->name('admin.visitor');
 Route::get('/admin/visitor/form',[VisitorController::class,'visitorform'])->name('visitor.form');
 Route::post('/visitor/store',[VisitorController::class,'store'])->name('visitor.store');
+Route::get('/admin/visitor/view/{id}',[VisitorController::class,'visitor_view'])->name('visitor.view');
+Route::get('/admin/visitor/delete/{id}',[VisitorController::class,'visitor_delete'])->name('visitor.delete');
 
 
 
@@ -205,7 +215,7 @@ Route::get('/user/registration',[LoginController::class,'registrationform'])->na
 Route::post('/registration/store',[LoginController::class,'store'])->name('registration.store');
 
 Route::get('/user/login',[LoginController::class,'loginform'])->name('user.login');
-Route::post('login/store',[LoginController::class,'dologin'])->name('login.dologin');
+Route::post('login/store',[LoginController::class,'login'])->name('login.do.login');
 Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
 
 

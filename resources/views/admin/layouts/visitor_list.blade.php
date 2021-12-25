@@ -28,6 +28,7 @@
                               <th>Relation</th>
                               <th>Address</th>
                               <th>Image</th>
+                              <th>Action</th>
                               
                           </tr>
                       </thead>
@@ -42,6 +43,10 @@
                               <td>{{$visitor->address}}</td>
                               <td>
                               <img width="100px" src="{{url('/uploads/visitor/'.$visitor->image)}}" alt="">
+                              </td>
+                              <td>
+                              <a class="btn btn-primary" href="{{route('visitor.view',$visitor->id)}}">View</a>
+                              <a class="btn btn-danger"  href="{{route('visitor.delete',$visitor->id)}}">Delete</a>
                               </td>
                              
                           </tr>

@@ -25,6 +25,7 @@
                               <th>Meal Category</th>
                               <th>Meal Fee</th>
                               <th>Meal History</th>
+                              <th>Action</th>
                               
                           </tr>
                       </thead>
@@ -35,6 +36,11 @@
                               <td>{{$meal->meal_category}}</td>
                               <td>{{$meal->meal_fee}}</td>
                               <td>{{$meal->meal_history}}</td>
+                              <td>
+                              <a class="btn btn-primary" href="{{route('meal.view',$meal->id)}}">View</a>
+                              <a class="btn btn-danger"  href="{{route('meal.delete',$meal->id)}}">Delete</a>
+
+                              </td>
                               
                           </tr>
                           @endforeach

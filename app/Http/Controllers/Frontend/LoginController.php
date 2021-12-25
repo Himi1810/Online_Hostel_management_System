@@ -17,11 +17,11 @@ class LoginController extends Controller
         return view('website.registration');
     }
 
-    // public function dologin()
-    // {
-    //     // dd("ok");
-    //     return view('website.login');
-    // }
+    public function dologin()
+    {
+        // dd("ok");
+        return view('website.login');
+    }
     public function store(Request $request){
         //  dd($request->all());
         User::create([
@@ -40,7 +40,7 @@ class LoginController extends Controller
 
     }
 
-    public function doLogin(Request $request){
+    public function Login(Request $request){
         // dd($request->all());
         $userpost=$request->except('_token');
             // dd($userpost);
@@ -55,7 +55,7 @@ class LoginController extends Controller
 
     public function logout(){
         Auth::logout();
-        return redirect()->route('website.pages.home');
+        return redirect()->route('website.home');
     }
          
 

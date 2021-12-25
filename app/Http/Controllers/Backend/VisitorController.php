@@ -36,15 +36,28 @@ class VisitorController extends Controller
             'relation'=>$request->relation,
             'image'=>$filename,
 
-
-
-
-           
-            
-
         
 
         ]);
         return redirect()->back(); 
 }
+
+public function visitor_view($id){
+    $visitor=Visitor::find($id);
+
+    return view('admin.layouts.visitor_view',compact('visitor'));
+}
+
+public function visitor_delete($id){
+    $visitor=Visitor::find($id);
+    
+        //  dd($visitor);
+          if($visitor){
+                  $visitor->delete();
+
+                  
+         return redirect()->back();
+}
+}
+
 }

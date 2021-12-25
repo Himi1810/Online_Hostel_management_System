@@ -21,7 +21,7 @@ class MealController extends Controller
 
     public function store(Request $request){
         Meal::create([
-            'meal_catagory'=>$request->meal_category,
+            'meal_category'=>$request->meal_category,
             'meal_fee'=>$request->meal_fee,
             'meal_history'=>$request->meal_history,
 
@@ -29,5 +29,23 @@ class MealController extends Controller
 
         ]);
         return redirect()->back(); 
+}
+
+public function meal_view($id){
+    $meal=Meal::find($id);
+
+    return view('admin.layouts.meal_view',compact('meal'));
+}
+
+public function meal_delete($id){
+    $meal=Meal::find($id);
+    
+        //  dd($meal);
+          if($meal){
+                  $meal->delete();
+
+                  
+         return redirect()->back();
+}
 }
 }

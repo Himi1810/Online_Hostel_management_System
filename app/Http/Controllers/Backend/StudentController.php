@@ -54,5 +54,13 @@ class StudentController extends Controller
              return redirect()->back();
 }
     }
+    public function student_edit($id){
+        $student=Student::all();
+        $student=Student::find($id);
+        if($student){
+
+            return view('admin.layouts.student_update',compact('student'));
+        }
+    }
 }
 

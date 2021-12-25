@@ -27,4 +27,8 @@ class AdminController extends Controller
         return redirect()->back();
       
     }
+
+    public function logout(){
+        return view('admin.layouts.admin_form');
+    }
 }

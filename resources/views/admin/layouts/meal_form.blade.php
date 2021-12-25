@@ -9,10 +9,16 @@
     <input type="number" name="student_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
 
-    <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter Your Meal Category</label>
-    <input type="text" name="meal_category" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  <div class="mb-3">
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Enter Your Meal Category </label>
+    <select name="meal_category" class="form-control" id="exampleFormControlSelect1">
+      <option>Morning</option>
+      <option>Day</option>
+      <option>Night</option>
+    </select>
   </div>
+</div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Meal Fee </label>
     <input type="number" name="meal_fee" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
