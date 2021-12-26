@@ -40,6 +40,7 @@
                               <td>
                               <a class="btn btn-primary" href="{{route('manageroom.view',$manageroom->id)}}">View</a>
                               <a class="btn btn-danger"  href="{{route('manageroom.delete',$manageroom->id)}}">Delete</a>
+                              <a class="btn btn-success" href="{{route('manageroom.edit',$manageroom->id)}}">Edit</a>
 
                               </td>
                               

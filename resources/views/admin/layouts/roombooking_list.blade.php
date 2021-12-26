@@ -43,6 +43,7 @@
                               <td>
                               <a class="btn btn-primary" href="{{route('roombooking.view',$roombooking->id)}}">View</a>
                               <a class="btn btn-danger"  href="{{route('roombooking.delete',$roombooking->id)}}">Delete</a>
+                              <a class="btn btn-success" href="{{route('roombooking.edit',$roombooking->id)}}">Edit</a>
 
 
                               </td>

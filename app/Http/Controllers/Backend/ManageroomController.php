@@ -19,9 +19,11 @@ class ManageroomController extends Controller
 
     public function store(Request $request){
         Manageroom::create([
+            'student_id'=>$request->student_id,
             'room_name'=>$request->room_name,
             'room_type'=>$request->room_type,
             'room_fee'=>$request->room_fee,
+            'allocative'=>$request->allocative,
            
 
             
@@ -45,5 +47,36 @@ public function manageroom_delete($id){
                   
          return redirect()->back();
 }
+}
+
+public function manageroom_edit($id){
+     
+    // $manageroom=Manageroom::all();
+    $manageroom=Manageroom::find($id);
+    // dd($manageroom);
+    if($manageroom){
+
+        return view('admin.layouts.manageroom_update',compact('manageroom'));
+    }
+}
+
+public function manageroom_update($id,Request $request){
+ 
+
+$manageroom=Manageroom::find($id);
+// dd($manageroom);
+if($manageroom){
+    $manageroom->update([
+        'student_id'=>$request->student_id,
+        'room_name'=>$request->room_name,
+            'room_type'=>$request->room_type,
+            'room_fee'=>$request->room_fee,
+            'allocative'=>$request->allocative,
+
+    ]);
+    return redirect()->route('admin.manageroom'); 
+   
+}
+
 }
 }

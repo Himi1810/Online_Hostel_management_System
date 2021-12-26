@@ -52,5 +52,37 @@ class EmployeeController extends Controller
              return redirect()->back();
 }
     }
+    public function employee_edit($id){
+     
+        // $employee=Employee::all();
+        $employee=Employee::find($id);
+        // dd($employee);
+        if($employee){
+
+            return view('admin.layouts.employee_update',compact('employee'));
+        }
+}
+
+public function employee_update($id,Request $request){
+     
+    
+    $employee=Employee::find($id);
+    // dd($employee);
+    if($employee){
+        $employee->update([
+
+            'name'=>$request->name,
+            'nid'=>$request->nid,
+            'email'=>$request->email,
+            'address'=>$request->address,
+            'phone_number'=>$request->phone_number,
+            // 'image'=>$filename,
+
+        ]);
+        return redirect()->route('admin.employee'); 
+       
+    }
+
+}
     
 }

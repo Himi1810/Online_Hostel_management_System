@@ -99,7 +99,8 @@ Route::get('/admin/hostel_information/form',[HostelController::class,'hostel_inf
 Route::post('/hostel/store/info',[HostelController::class,'store'])->name('hostel.store');
 Route::get('/admin/hostel_information/view/{id}',[HostelController::class,'hostel_information_view'])->name('admin.hostel_informationview');
 Route::get('/admin/hostel_information/delete/{id}',[HostelController::class,'hostel_information_delete'])->name('admin.hostel_informationdelete');
-
+Route::get('/admin/hostel_information/edit/{id}',[HostelController::class,'hostel_information_edit'])->name('admin.hostel_informationedit');
+Route::put('/admin/hostel_information/update/{id}',[HostelController::class,'hostel_information_update'])->name('admin.hostel_informationupdate');
 
 
 
@@ -122,6 +123,7 @@ Route::post('/student/store',[StudentController::class,'store'])->name('student.
 Route::get('/admin/student/view/{id}',[StudentController::class,'student_view'])->name('student.view');
 Route::get('/admin/student/delete/{id}',[StudentController::class,'student_delete'])->name('student.delete');
 Route::get('/admin/student/edit/{id}',[StudentController::class,'student_edit'])->name('student.edit');
+Route::put('/admin/student/update/{id}',[StudentController::class,'student_update'])->name('student.update');
 
 
 
@@ -132,7 +134,8 @@ Route::get('/admin/roombooking/form',[RoombookingController::class,'roombookingf
 Route::post('/roombooking/store',[RoombookingController::class,'store'])->name('roombooking.store');
 Route::get('/admin/roombooking/view/{id}',[RoombookingController::class,'roombooking_view'])->name('roombooking.view');
 Route::get('/admin/roombooking/delete/{id}',[RoombookingController::class,'roombooking_delete'])->name('roombooking.delete');
-
+Route::get('/admin/roombooking/edit/{id}',[RoombookingController::class,'roombooking_edit'])->name('roombooking.edit');
+Route::put('/admin/roombooking/update/{id}',[RoombookingController::class,'roombooking_update'])->name('roombooking.update');
 
 
 
@@ -143,6 +146,8 @@ Route::get('/admin/manage-room-form',[ManageroomController::class,'manageroomfor
 Route::post('/manage-room/store',[ManageroomController::class,'store'])->name('manageroom.store');
 Route::get('/admin/manageroom/view/{id}',[ManageroomController::class,'manageroom_view'])->name('manageroom.view');
 Route::get('/admin/manageroom/delete/{id}',[ManageroomController::class,'manageroom_delete'])->name('manageroom.delete');
+Route::get('/admin/manageroom/edit/{id}',[ManageroomController::class,'manageroom_edit'])->name('manageroom.edit');
+Route::put('/admin/manageroom/update/{id}',[ManageroomController::class,'mangeroom_update'])->name('manageroom.update');
 
 
 
@@ -207,7 +212,8 @@ Route::get('/admin/employee/form',[EmployeeController::class,'employeeform'])->n
 Route::post('/employee/store',[EmployeeController::class,'store'])->name('employee.store');
 Route::get('/admin/employee/view/{id}',[EmployeeController::class,'employee_view'])->name('employee.view');
 Route::get('/admin/employee/delete/{id}',[EmployeeController::class,'employee_delete'])->name('employee.delete');
-
+Route::get('/admin/employee/edit/{id}',[EmployeeController::class,'employee_edit'])->name('employee.edit');
+Route::put('/admin/employee/update/{id}',[EmployeeController::class,'employee_update'])->name('employee.update');
 
 
 // Registration  part

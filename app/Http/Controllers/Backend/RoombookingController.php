@@ -48,4 +48,37 @@ class RoombookingController extends Controller
              return redirect()->back();
 }
     }
+
+    public function roombooking_edit($id){
+     
+        // $roombooking=Roombooking::all();
+        $roombooking=Roombooking::find($id);
+        // dd($roombooking);
+        if($roombooking){
+
+            return view('admin.layouts.roombooking_update',compact('roombooking'));
+        }
+}
+
+public function roombooking_update($id,Request $request){
+     
+    
+    $roombooking=Roombooking::find($id);
+    // dd($roombooking);
+    if($roombooking){
+        $roombooking->update([
+
+            'room_id'=>$request->room_id,
+            'student_id'=>$request->student_id,
+
+            'booking_date'=>$request->booking_date,
+            'room_status'=>$request->room_status,
+            'room_fee'=>$request->room_fee,
+
+        ]);
+        return redirect()->route('admin.roombooking'); 
+       
+    }
+
+}
 }

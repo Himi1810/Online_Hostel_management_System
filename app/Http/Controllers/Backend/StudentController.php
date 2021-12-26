@@ -55,12 +55,36 @@ class StudentController extends Controller
 }
     }
     public function student_edit($id){
-        $student=Student::all();
+     
+        // $student=Student::all();
         $student=Student::find($id);
+        // dd($student);
         if($student){
 
             return view('admin.layouts.student_update',compact('student'));
         }
-    }
 }
 
+public function student_update($id,Request $request){
+     
+    // $student=Student::all();
+    $student=Student::find($id);
+    // dd($student);
+    if($student){
+        $student->update([
+
+            'name'=>$request->name,
+            'nid'=>$request->nid,
+            'email' => $request->email,
+            'phone_number'=>$request->phone_number,
+            'address'=>$request->address,
+            // 'image'=>$filename
+
+        ]);
+        return redirect()->route('admin.student'); 
+       
+    }
+
+}
+
+}

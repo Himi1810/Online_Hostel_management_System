@@ -52,4 +52,36 @@ class HostelController extends Controller
              return redirect()->back();
 }
     }
+
+    public function hostel_information_edit($id){
+     
+        // $hostel=Hostel::all();
+        $hostel=hostel::find($id);
+        // dd($hostel);
+        if($hostel){
+
+            return view('admin.layouts.hostel_information_update',compact('hostel'));
+        }
+}
+
+public function hostel_information_update($id,Request $request){
+     
+    
+    $hostel=Hostel::find($id);
+    // dd($hostel);
+    if($hostel){
+        $hostel->update([
+
+            'number_of_rooms'=>$request->number_of_rooms,
+            'hostel_location'=>$request->hostel_location,
+            'hostel_type'=>$request->hostel_type,
+            'Total_rooms'=>$request->total_rooms,
+            'name_of_the_hostel'=>$request->name_of_the_hostel,
+
+        ]);
+        return redirect()->route('admin.hostel_informationlist'); 
+       
+    }
+
+}
 }
