@@ -116,7 +116,7 @@ Route::put('/admin/hostel_information/update/{id}',[HostelController::class,'hos
 
 //Route::get('/admin/admin',[AdminController::class,'adminpart'])->name('admin.hosteladmin');
 
-//student;
+//student
 Route::get('/admin/student/list',[StudentController::class,'studentlist'])->name('admin.student');
 Route::get('/admin/student/form',[StudentController::class,'studentform'])->name('student.form');
 Route::post('/student/store',[StudentController::class,'store'])->name('student.store');
@@ -158,6 +158,8 @@ Route::get('/admin/meal/form',[MealController::class,'mealform'])->name('meal.fo
 Route::post('/meal/store',[MealController::class,'store'])->name('meal.store');
 Route::get('/admin/meal/view/{id}',[MealController::class,'meal_view'])->name('meal.view');
 Route::get('/admin/meal/delete/{id}',[MealController::class,'meal_delete'])->name('meal.delete');
+Route::get('/admin/meal/edit/{id}',[MealController::class,'meal_edit'])->name('meal.edit');
+Route::put('/admin/meal/update/{id}',[MealController::class,'meal_update'])->name('meal.update');
 
 
 
@@ -171,6 +173,9 @@ Route::get('/admin/visitor/form',[VisitorController::class,'visitorform'])->name
 Route::post('/visitor/store',[VisitorController::class,'store'])->name('visitor.store');
 Route::get('/admin/visitor/view/{id}',[VisitorController::class,'visitor_view'])->name('visitor.view');
 Route::get('/admin/visitor/delete/{id}',[VisitorController::class,'visitor_delete'])->name('visitor.delete');
+Route::get('/admin/visitor/edit/{id}',[VisitorController::class,'visitor_edit'])->name('visitor.edit');
+Route::put('/admin/visitor/update/{id}',[VisitorController::class,'visitor_update'])->name('visitor.update');
+
 
 
 
@@ -185,6 +190,9 @@ Route::get('/admin/payment/list',[PaymentController::class,'paymentlist'])->name
 Route::get('/admin/payment/form',[PaymentController::class,'paymentform'])->name('payment.form');
 Route::post('/payment/store',[PaymentController::class,'store'])->name('payment.store');
 Route::get('/admin/payment/view/{id}',[PaymentController::class,'payment_view'])->name('payment.view');
+Route::get('/admin/payment/delete/{id}',[PaymentController::class,'payment_delete'])->name('payment.delete');
+Route::get('/admin/payment/edit/{id}',[PaymentController::class,'payment_edit'])->name('payment.edit');
+Route::put('/admin/manageroom/update/{id}',[PaymentController::class,'payment_update'])->name('payment.update');
 
 
 
@@ -194,6 +202,11 @@ Route::get('/admin/payment/view/{id}',[PaymentController::class,'payment_view'])
 Route::get('/admin/notice/list',[noticeController::class,'noticelist'])->name('admin.notice');
 Route::get('/admin/notice/form',[noticeController::class,'noticeform'])->name('notice.form');
 Route::post('/notice/store',[NoticeController::class,'store'])->name('notice.store');
+Route::get('/admin/notice/view/{id}',[NoticeController::class,'notice_view'])->name('notice.view');
+Route::get('/admin/notice/delete/{id}',[NoticeController::class,'notice_delete'])->name('notice.delete');
+Route::get('/admin/notice/edit/{id}',[NoticeController::class,'notice_edit'])->name('notice.edit');
+Route::put('/admin/notice/update/{id}',[NoticeController::class,'notice_update'])->name('notice.update');
+
 
 
 

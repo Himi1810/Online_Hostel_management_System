@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 class ManageroomController extends Controller
 {
     public function manageroomlist(){
-        $managerooms = Manageroom::all();
-        // dd($managerooms);
+       
         return view('admin.layouts.manageroom_list',compact('managerooms'));
     }
     public function manageroomform(){
@@ -69,9 +68,9 @@ if($manageroom){
     $manageroom->update([
         'student_id'=>$request->student_id,
         'room_name'=>$request->room_name,
-            'room_type'=>$request->room_type,
-            'room_fee'=>$request->room_fee,
-            'allocative'=>$request->allocative,
+        'room_type'=>$request->room_type,
+        'room_fee'=>$request->room_fee,
+         'allocative'=>$request->allocative,
 
     ]);
     return redirect()->route('admin.manageroom'); 

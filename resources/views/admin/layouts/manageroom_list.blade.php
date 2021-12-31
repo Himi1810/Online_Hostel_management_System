@@ -22,9 +22,11 @@
                   <table id="datatablesSimple">
                       <thead>
                           <tr>
+                              <th>Student ID</th>
                               <th>Room Name</th>
                               <th>Room Type</th>
                               <th>Room Fee</th>
+                              <th>Room Allocative</th>
                               <th>Action</th>
                              
                              
@@ -34,9 +36,11 @@
                       <tbody>
                       @foreach($managerooms as $manageroom)
                           <tr>
+                              <td>{{$manageroom->student_id}}</td>
                               <td>{{$manageroom->room_name}}</td>
                               <td>{{$manageroom->room_type}}</td>
                               <td>{{$manageroom->room_fee}}</td>
+                              <td>{{$manageroom->allocative}}</td>
                               <td>
                               <a class="btn btn-primary" href="{{route('manageroom.view',$manageroom->id)}}">View</a>
                               <a class="btn btn-danger"  href="{{route('manageroom.delete',$manageroom->id)}}">Delete</a>

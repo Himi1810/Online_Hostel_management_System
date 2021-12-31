@@ -1,8 +1,9 @@
 @extends('admin.master')
 @section('main')
 
-<form action="{{route('notice.store')}}"method='post' >
+<form action="{{route('notice.update',$notice->id)}}"method='post' >
     @csrf
+    @method('put')
 
     <!-- <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Student ID</label>
@@ -11,20 +12,20 @@
 
     <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Notice Date</label>
-    <input type="date" name="notice_date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input value="{{$notice->notice_date}}" type="date" name="notice_date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Notice_title </label>
-    <input type="text" name="notice_title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input value="{{$notice->notice_title}}" type="text" name="notice_title" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Notice Description </label>
-    <input type="text" name="notice_description" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input value="{{$notice->notice_description}}" type="text" name="notice_description" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
   
  
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Update</button>
 </form>
 @stop

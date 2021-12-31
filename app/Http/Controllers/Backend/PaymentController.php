@@ -43,4 +43,49 @@ public function payment_view($id){
 
     return view('admin.layouts.payment_view',compact('payment'));
 }
+public function payment_delete($id){
+    $payment=Payment::find($id);
+    
+        //  dd($payment);
+          if($payment){
+                  $payment->delete();
+
+                  
+         return redirect()->back();
+}
+}
+
+public function payment_edit($id){
+     
+    // $payment=Payment::all();
+    $payment=payment::find($id);
+    // dd($payment);
+    if($payment){
+
+        return view('admin.layouts.payment_update',compact('payment'));
+    }
+}
+
+public function payment_update($id,Request $request){
+ 
+
+$payment=Payment::find($id);
+// dd($payment);
+if($payment){
+    $payment->update([
+
+        'student_id'=>$request->student_id,
+            'amount'=>$request->amount,
+            'payment_date'=>$request->payment_date,
+            'payment_status'=>$request->payment_status,
+            'payment_method'=>$request->payment_method,
+
+
+        
+    ]);
+    return redirect()->route('admin.payment'); 
+   
+}
+
+}
 }

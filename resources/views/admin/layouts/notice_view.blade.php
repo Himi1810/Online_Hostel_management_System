@@ -2,12 +2,11 @@
 @section('main')
 
 <div id="divToPrint">
-<h1>Meal Details</h1>
+<h1>Notice Details</h1>
 
-                              <p>Meal Category {{$meal->meal_category}}</p>
-                              <p>Meal Fee {{$meal->meal_fee}}</p>
-                              <p>Meal History {{$meal->meal_history}}</p>
-                             
+                              <p>Notice Date {{$notice->notice_date}}</p>
+                              <p>Notice Title {{$notice->notice_title}}</p>
+                              <p>Notice Description {{$notice->notice_description}}</p>
 
     </div>
     <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">                   

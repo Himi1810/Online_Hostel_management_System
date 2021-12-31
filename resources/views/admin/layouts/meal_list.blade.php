@@ -39,6 +39,7 @@
                               <td>
                               <a class="btn btn-primary" href="{{route('meal.view',$meal->id)}}">View</a>
                               <a class="btn btn-danger"  href="{{route('meal.delete',$meal->id)}}">Delete</a>
+                              <a class="btn btn-success" href="{{route('meal.edit',$meal->id)}}">Edit</a>
 
                               </td>
                               

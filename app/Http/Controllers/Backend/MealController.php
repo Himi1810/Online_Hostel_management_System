@@ -48,4 +48,35 @@ public function meal_delete($id){
          return redirect()->back();
 }
 }
+
+public function meal_edit($id){
+     
+    // $meal=Meal::all();
+    $meal=Meal::find($id);
+    // dd($meal);
+    if($meal){
+
+        return view('admin.layouts.meal_update',compact('meal'));
+    }
+}
+
+public function meal_update($id,Request $request){
+ 
+
+$meal=Meal::find($id);
+// dd($meal);
+if($meal){
+    $meal->update([
+
+        'meal_category'=>$request->meal_category,
+        'meal_fee'=>$request->meal_fee,
+        'meal_history'=>$request->meal_history,
+
+
+    ]);
+    return redirect()->route('admin.meal'); 
+   
+}
+
+}
 }

@@ -42,6 +42,8 @@
                               <td>{{$payment->payment_method}}</td>
                               <td>
                               <a class="btn btn-primary" href="{{route('payment.view',$payment->id)}}">View</a>
+                              <a class="btn btn-danger"  href="{{route('payment.delete',$payment->id)}}">Delete</a>
+                              <a class="btn btn-success" href="{{route('payment.edit',$payment->id)}}">Edit</a>
 
                               </td>
                               

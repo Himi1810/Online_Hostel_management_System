@@ -60,4 +60,40 @@ public function visitor_delete($id){
 }
 }
 
+public function visitor_edit($id){
+     
+    // $visitor=Visitor::all();
+    $visitor=visitor::find($id);
+    // dd($visitor);
+    if($visitor){
+
+        return view('admin.layouts.visitor_update',compact('visitor'));
+    }
+}
+
+public function visitor_update($id,Request $request){
+ 
+
+$visitor=Visitor::find($id);
+// dd($Visitor);
+if($visitor){
+    $visitor->update([
+
+        'name'=>$request->name,
+            'address'=>$request->address,
+            'phone_number'=>$request->phone_number,
+            
+            'nid'=>$request->nid,
+            'relation'=>$request->relation,
+            // 'image'=>$filename,
+
+       
+
+    ]);
+    return redirect()->route('admin.visitor'); 
+   
+}
+
+}
+
 }
