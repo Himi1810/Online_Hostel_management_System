@@ -47,7 +47,7 @@ class LoginController extends Controller
             // dd(Auth::attempt($userpost));
         if (Auth::attempt($userpost)) {
             // dd("true");
-            return redirect()->route('website.pages.home');
+            return redirect()->route('website.home');
         }
         else
         return redirect()->route('user.login');

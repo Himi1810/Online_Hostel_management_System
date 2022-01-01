@@ -9,9 +9,9 @@
                             </a>
                        
                             <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="#">
+                            <!-- <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Admin
+                                Admin -->
                             </a>
                             <a class="nav-link" href="{{route('admin.student')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
@@ -22,7 +22,7 @@
                                 Employee
                             </a>
                             <a class="nav-link" href="{{route('admin.hostel_informationlist')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa fa-home fa-fw"></i></div>
                                 Hostel Information
                             </a>
                             <a class="nav-link" href="{{route('admin.manageroom')}}">
@@ -49,10 +49,11 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Notice
                             </a>
-                            <a class="nav-link" href="{{route('website.request')}}">
+                            <a class="nav-link" href="{{route('admin.layouts.userprofile_list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Request
+                                User Request
                             </a>
+                            
                             <a class="nav-link" href="{{route('admin.report')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Report

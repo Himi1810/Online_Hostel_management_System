@@ -8,7 +8,7 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="{{route('website.home')}}">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="{{route('website.services')}}">Services</a></li>
           @if(auth()->user())
@@ -16,11 +16,11 @@
           @else
 
 
-          <li><a class="nav-link scrollto" href="{{route('user.registration')}}">Registration</a></li>
-          <li><a class="nav-link scrollto" href="{{route('user.login')}}">Log In</a></li>
+            <li><a class="nav-link scrollto" href="{{route('user.registration')}}">Registration</a></li>
+            <li><a class="nav-link scrollto" href="{{route('user.login')}}">Log In</a></li>
           @endif
 
-          <li><a class="nav-link scrollto" href="{{route('website.form')}}">Request</a></li>
+          <li><a class="nav-link scrollto" href="{{route('website.pages.userprofile')}}">User Request</a></li>
 
          
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>

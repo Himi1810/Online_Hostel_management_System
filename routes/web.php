@@ -13,11 +13,13 @@ use App\Http\controllers\Backend\StudentController;
 use App\Http\controllers\Backend\visitorController;
 use App\Http\Controllers\Backend\EmployeeController;
 use App\Http\Controllers\Frontend\ContactController;
-use App\Http\Controllers\Frontend\RequestController;
+use App\Http\Controllers\Frontend\UserprofileController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Frontend\ServicesController;
 use App\Http\controllers\Backend\manageroomController;
 use App\Http\controllers\Backend\roombookingController;
+use App\Http\Controllers\Frontend\HomeController;
+
 
 
 
@@ -64,11 +66,23 @@ Route::get('about',[AboutController::class,'about'])->name('website.about');
 Route::get('contact',[ContactController::class,'contact'])->name('website.contact');
 
 //requestform
-Route::get('request',[RequestController::class,'request'])->name('website.request');
-Route::get('/website/request/form',[RequestController::class,'requestform'])->name('website.form');
-Route::post('/request/store',[RequestController::class,'store'])->name('request.store');
+// Route::get('request',[RequestController::class,'request'])->name('website.request');
+// Route::get('/website/request/form',[RequestController::class,'requestform'])->name('website.form');
+// Route::post('/request/store',[RequestController::class,'store'])->name('request.store');
+
+//userrequest
+Route::get('/user/profile/list',[UserprofileController::class,'userprofile_list'])->name('admin.layouts.userprofile_list');
+Route::get('/user/profile',[UserprofileController::class,'userprofile'])->name('website.pages.userprofile');
+Route::post('/user/store/profile',[UserprofileController::class,'store'])->name('website.profile.store');
 
 
+   // Registration  part
+   Route::get('/user/registration',[LoginController::class,'registrationform'])->name('user.registration');
+   Route::post('/registration/store',[LoginController::class,'store'])->name('registration.store');
+
+   Route::get('/user/login',[LoginController::class,'loginform'])->name('user.login');
+   Route::post('login/store',[LoginController::class,'login'])->name('login.dologin');
+   Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
 
 
 //dashboard
@@ -81,6 +95,9 @@ Route::post('/request/store',[RequestController::class,'store'])->name('request.
 Route::get('/login',[AdminController::class,'login'])->name('admin.login');
 Route::post('/admin/do/login',[AdminController::class,'dologin'])->name('admin.dologin');
 
+
+
+//Backend start
 Route::group(['prefix'=>'admin'],function (){
 
     Route::get('/admin/dashboard',[AdminController::class,'dashboard'])->name('dashboard');
@@ -93,14 +110,14 @@ Route::group(['prefix'=>'admin'],function (){
         Route::get('admin/logout',[AdminController::class,'logout'])->name('admin.logout');
 
 
-//hostel
-Route::get('/admin/hostel_information/list',[HostelController::class,'hostel_infolist'])->name('admin.hostel_informationlist');
-Route::get('/admin/hostel_information/form',[HostelController::class,'hostel_infoform'])->name('admin.hostel_informationform');
-Route::post('/hostel/store/info',[HostelController::class,'store'])->name('hostel.store');
-Route::get('/admin/hostel_information/view/{id}',[HostelController::class,'hostel_information_view'])->name('admin.hostel_informationview');
-Route::get('/admin/hostel_information/delete/{id}',[HostelController::class,'hostel_information_delete'])->name('admin.hostel_informationdelete');
-Route::get('/admin/hostel_information/edit/{id}',[HostelController::class,'hostel_information_edit'])->name('admin.hostel_informationedit');
-Route::put('/admin/hostel_information/update/{id}',[HostelController::class,'hostel_information_update'])->name('admin.hostel_informationupdate');
+    //hostel
+    Route::get('/admin/hostel_information/list',[HostelController::class,'hostel_infolist'])->name('admin.hostel_informationlist');
+    Route::get('/admin/hostel_information/form',[HostelController::class,'hostel_infoform'])->name('admin.hostel_informationform');
+    Route::post('/hostel/store/info',[HostelController::class,'store'])->name('hostel.store');
+    Route::get('/admin/hostel_information/view/{id}',[HostelController::class,'hostel_information_view'])->name('admin.hostel_informationview');
+    Route::get('/admin/hostel_information/delete/{id}',[HostelController::class,'hostel_information_delete'])->name('admin.hostel_informationdelete');
+    Route::get('/admin/hostel_information/edit/{id}',[HostelController::class,'hostel_information_edit'])->name('admin.hostel_informationedit');
+    Route::put('/admin/hostel_information/update/{id}',[HostelController::class,'hostel_information_update'])->name('admin.hostel_informationupdate');
 
 
 
@@ -213,40 +230,34 @@ Route::put('/admin/notice/update/{id}',[NoticeController::class,'notice_update']
 
 
 
-//report
-Route::get('/admin/report',[reportController::class,'report'])->name('admin.report');
+    //report
+    Route::get('/admin/report',[reportController::class,'report'])->name('admin.report');
 
-//Route::post('/hostelinformation/store',[HostelController::class,'store'])->name('hostelinformation.store');
-//Route::get('/admin/hostel',[HostelController::class,'hostel'])->name('admin.hostel');
+    //Route::post('/hostelinformation/store',[HostelController::class,'store'])->name('hostelinformation.store');
+    //Route::get('/admin/hostel',[HostelController::class,'hostel'])->name('admin.hostel');
 
-// employee
-Route::get('/admin/employee/list',[EmployeeController::class,'employeelist'])->name('admin.employee');
-Route::get('/admin/employee/form',[EmployeeController::class,'employeeform'])->name('employee.form');
-Route::post('/employee/store',[EmployeeController::class,'store'])->name('employee.store');
-Route::get('/admin/employee/view/{id}',[EmployeeController::class,'employee_view'])->name('employee.view');
-Route::get('/admin/employee/delete/{id}',[EmployeeController::class,'employee_delete'])->name('employee.delete');
-Route::get('/admin/employee/edit/{id}',[EmployeeController::class,'employee_edit'])->name('employee.edit');
-Route::put('/admin/employee/update/{id}',[EmployeeController::class,'employee_update'])->name('employee.update');
+    // employee
+    Route::get('/admin/employee/list',[EmployeeController::class,'employeelist'])->name('admin.employee');
+    Route::get('/admin/employee/form',[EmployeeController::class,'employeeform'])->name('employee.form');
+    Route::post('/employee/store',[EmployeeController::class,'store'])->name('employee.store');
+    Route::get('/admin/employee/view/{id}',[EmployeeController::class,'employee_view'])->name('employee.view');
+    Route::get('/admin/employee/delete/{id}',[EmployeeController::class,'employee_delete'])->name('employee.delete');
+    Route::get('/admin/employee/edit/{id}',[EmployeeController::class,'employee_edit'])->name('employee.edit');
+    Route::put('/admin/employee/update/{id}',[EmployeeController::class,'employee_update'])->name('employee.update');
 
 
-// Registration  part
-Route::get('/user/registration',[LoginController::class,'registrationform'])->name('user.registration');
-Route::post('/registration/store',[LoginController::class,'store'])->name('registration.store');
-
-Route::get('/user/login',[LoginController::class,'loginform'])->name('user.login');
-Route::post('login/store',[LoginController::class,'login'])->name('login.do.login');
-Route::get('/user/logout',[LoginController::class,'logout'])->name('user.logout');
+ 
 
 
 
 
 
 
-//dashboard
-Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
+    //dashboard
+    Route::get('/dashboard',[DashboardController::class,'dashboard'])->name('admin.dashboard');
 
-// admin form starts here
-// Route::get('/login-admin',[AdminController::class,'login'])->name('admin.login');
-// Route::post('/do_login',[AdminController::class,'login'])->name('do.login');
-    });
+    // admin form starts here
+    // Route::get('/login-admin',[AdminController::class,'login'])->name('admin.login');
+    // Route::post('/do_login',[AdminController::class,'login'])->name('do.login');
+        });
 });

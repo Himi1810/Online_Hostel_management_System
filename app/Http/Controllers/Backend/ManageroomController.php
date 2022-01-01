@@ -9,6 +9,8 @@ use Illuminate\Http\Request;
 class ManageroomController extends Controller
 {
     public function manageroomlist(){
+        $managerooms = Manageroom::all();
+        // dd($managerooms);
        
         return view('admin.layouts.manageroom_list',compact('managerooms'));
     }
