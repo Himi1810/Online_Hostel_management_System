@@ -22,11 +22,12 @@ class UserprofileController extends Controller
 
         Userrequest::create([
 
-            'full_name'=>$request->name,
+            'student_id'=>$request->student_id,
+            'seat_id'=>$request->seat_id,
+            'booking_date'=>$request->date,
             'email'=>$request->email,
-            'date'=>$request->date,
-            'phone_number'=>$request->phone_number,
-            'description'=>$request->send_request
+            'description'=>$request->send_request,
+           
 
 
 
@@ -34,4 +35,68 @@ class UserprofileController extends Controller
         return redirect()->route('website.home');
     }
 
+    public function userprofile_view($id){
+        $usertable=Userrequest::find($id);
+
+        return view('admin.layouts.userprofile_view',compact('usertable'));
+    }
+
+
+
+    
+    
+
+    public function userprofile_accept($id){
+    //  dd($id);
+        // $usertable=Userrequest::all();
+        $usertable=Userrequest::find($id);
+        //  dd($usertable);
+        if($usertable){
+            $usertable->update([
+                'status'=>'approve'
+            ]);
+            
+            
+        }
+        return redirect()->back();
 }
+
+public function userprofile_reject($id){
+    // dd($id);
+    $usertable=Userrequest::find($id);
+    
+        //  dd($usertable);
+          if($usertable){
+                  $usertable->update([
+                    'status'=>'rejected'
+                  ]);
+
+                  
+         return redirect()->back();
+}
+}
+public function userprofile_update($id,Request $request){
+     
+    
+    $usertable=Userrequest::find($id);
+    // dd($usertable);
+    if($usertable){
+        $usertable->update([
+
+            'student_id'=>$request->student_id,
+            'seat_id'=>$request->seat_id,
+            'booking_date'=>$request->date,
+            'email'=>$request->email,
+            'description'=>$request->send_request,
+            'status'=>$request->status
+
+
+        ]);
+        return redirect()->route('admin.roombooking_list'); 
+       
+    }
+}
+}
+
+
+

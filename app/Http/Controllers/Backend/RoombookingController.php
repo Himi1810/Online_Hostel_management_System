@@ -20,9 +20,8 @@ class RoombookingController extends Controller
 
     public function store(Request $request){
         Roombooking::create([
-            'room_id'=>$request->room_id,
+            'seat_id'=>$request->seat_id,
             'student_id'=>$request->student_id,
-
             'booking_date'=>$request->booking_date,
             'room_status'=>$request->room_status,
             'room_fee'=>$request->room_fee,
@@ -68,9 +67,8 @@ public function roombooking_update($id,Request $request){
     if($roombooking){
         $roombooking->update([
 
-            'room_id'=>$request->room_id,
+            'seat_id'=>$request->seat_id,
             'student_id'=>$request->student_id,
-
             'booking_date'=>$request->booking_date,
             'room_status'=>$request->room_status,
             'room_fee'=>$request->room_fee,

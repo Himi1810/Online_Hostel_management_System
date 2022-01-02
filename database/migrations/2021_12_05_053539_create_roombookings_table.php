@@ -15,7 +15,7 @@ class CreateRoombookingsTable extends Migration
     {
         Schema::create('roombookings', function (Blueprint $table) {
             $table->id();
-            $table->integer('room_id');
+            $table->integer('seat_id');
             $table->integer('student_id');
            
             $table->string('booking_date');

@@ -99,22 +99,22 @@ body{
   <div class="col-md-10">
   <form action="{{route('website.profile.store')}}"method='post'>
     @csrf
+                       <h1>REQUEST fORM</h1>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter Your Full Name</label>
-    <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Student ID</label>
+    <input type="number" name="student_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter Your Email</label>
-    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Seat ID</label>
+    <input type="number" name="seat_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
-  
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Date</label>
+    <label for="exampleInputEmail1" class="form-label">Booking Date</label>
     <input type="date" name="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter Your Phone Number</label>
-    <input type="number" name="phone_number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Description</label>
@@ -124,7 +124,7 @@ body{
 
   
  
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Send Request</button>
 </form>
 </div>
   <div class="col-md-1">

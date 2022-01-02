@@ -5,8 +5,8 @@
     @csrf
 
     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter Your Room Id</label>
-    <input type="number" name="room_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Seat Id</label>
+    <input type="number" name="seat_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Booking Date</label>

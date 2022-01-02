@@ -1,4 +1,4 @@
-<footer id="footer">
+<!-- <footer id="footer">
     <div class="footer-top">
       <div class="container">
         <div class="row">
@@ -70,4 +70,4 @@
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer> -->

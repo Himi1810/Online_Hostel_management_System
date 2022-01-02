@@ -22,7 +22,7 @@
                   <table id="datatablesSimple">
                       <thead>
                           <tr>
-                              <th>Room Id</th>
+                              <th>Seat Id</th>
                               <th>Student Id</th>
                               <th>Booking Date</th>
                               <th>Room Status</th>
@@ -35,7 +35,7 @@
                       <tbody>
                       @foreach($roombookings as $roombooking)
                           <tr>
-                              <td>{{$roombooking->room_id}}</td>
+                              <td>{{$roombooking->seat_id}}</td>
                               <td>{{$roombooking->student_id}}</td>
                               <td>{{$roombooking->booking_date}}</td>
                               <td>{{$roombooking->room_status}}</td>

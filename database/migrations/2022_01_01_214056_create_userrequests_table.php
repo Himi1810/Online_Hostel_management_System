@@ -15,11 +15,12 @@ class CreateUserrequestsTable extends Migration
     {
         Schema::create('userrequests', function (Blueprint $table) {
             $table->id();
-            $table->string('full_name');
+            $table->integer('student_id');
+            $table->integer('seat_id');
+            $table->date('booking_date');
             $table->string('email');
-            $table->date('date');
-            $table->integer('phone_number');
             $table->string('description');
+            $table->string('status')->default('pending');
             $table->timestamps();
         });
     }

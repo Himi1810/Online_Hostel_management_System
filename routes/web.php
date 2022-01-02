@@ -74,6 +74,12 @@ Route::get('contact',[ContactController::class,'contact'])->name('website.contac
 Route::get('/user/profile/list',[UserprofileController::class,'userprofile_list'])->name('admin.layouts.userprofile_list');
 Route::get('/user/profile',[UserprofileController::class,'userprofile'])->name('website.pages.userprofile');
 Route::post('/user/store/profile',[UserprofileController::class,'store'])->name('website.profile.store');
+Route::get('/user/profile/view/{id}',[UserprofileController::class,'userprofile_view'])->name('userprofile.view');
+Route::get('/user/profile/reject/{id}',[UserprofileController::class,'userprofile_reject'])->name('userprofile.reject');
+Route::get('/user/profile/accept/{id}',[UserprofileController::class,'userprofile_accept'])->name('userprofile.accept');
+
+// Route::get('/user/profile/edit/{id}',[UserprofileController::class,'userprofile_edit'])->name('userprofile.edit');
+// Route::put('/user/profile/update/{id}',[UserprofileController::class,'userprofile_update'])->name('userprofile.update');
 
 
    // Registration  part

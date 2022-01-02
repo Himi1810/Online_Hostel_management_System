@@ -21,26 +21,34 @@
                   <table id="datatablesSimple">
                       <thead>
                           <tr>
-                              <th>Full Name</th>
-                              <th>Email</th>
+                              <th>Student ID</th>
+                              <th>Seat ID</th>
                               
-                              <th>Date</th>
-                              <th>Phone Number</th>
+                              <th>Booking Date</th>
+                              <th>Email</th>
                               <th>Description</th>
-                              <th>Action</th>
+                              <th>Admin Approval</th>
                           </tr>
                       </thead>
                      
                       <tbody>
                       @foreach($usertable as $usertable)
                           <tr>
-                              <td>{{$request->full_name}}</td>
-                              <td>{{$request->email}}</td>
+                              <td>{{$usertable->student_id}}</td>
+                              <td>{{$usertable->seat_id}}</td>
                         
-                              <td>{{$request->date}}</td>
-                              <td>{{$request->phone_number}}</td>
-                              <td>{{$request->description}}</td>
+                              <td>{{$usertable->booking_date}}</td>
+                              <td>{{$usertable->email}}</td>
+                              <td>{{$usertable->description}}</td>
+                              <td>
+                                  @if($usertable->status == 'accept')
+                              <a class="btn btn-danger" href="{{route('userprofile.reject',$usertable->id)}}" >Reject</a>
+                                @else
+                              <a class="btn btn-primary" href="{{route('userprofile.accept',$usertable->id)}}" >Accept</a>
+                              @endif
+                              <a class="btn btn-success" href="{{route('userprofile.view',$usertable->id)}}" >View</a>
                              
+                              </td>
                               
                                 
                           </tr>
