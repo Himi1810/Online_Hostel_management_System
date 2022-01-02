@@ -14,11 +14,11 @@
                                 Admin -->
                             </a>
                             <a class="nav-link" href="{{route('admin.student')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-alt"></i></div>
                                 Student
                             </a>
                             <a class="nav-link" href="{{route('admin.employee')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa fa-user"></i></div>
                                 Employee
                             </a>
                             <a class="nav-link" href="{{route('admin.hostel_informationlist')}}">
@@ -26,11 +26,11 @@
                                 Hostel Information
                             </a>
                             <a class="nav-link" href="{{route('admin.manageroom')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="far fa-building"></i></div>
                                 Manage Room
                             </a>
                             <a class="nav-link" href="{{route('admin.roombooking')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-building"></i></div>
                                 Room Booking
                             </a>
                             <a class="nav-link" href="{{route('admin.payment')}}">
@@ -38,11 +38,11 @@
                                 Payment
                             </a>
                             <a class="nav-link" href="{{route('admin.meal')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-hamburger"></i></div>
                                 Meal
                             </a>
                             <a class="nav-link" href="{{route('admin.visitor')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Visitor
                             </a>
                             <a class="nav-link" href="{{route('admin.notice')}}">
@@ -50,7 +50,7 @@
                                 Notice
                             </a>
                             <a class="nav-link" href="{{route('admin.layouts.userprofile_list')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
                                 User Request
                             </a>
                             
