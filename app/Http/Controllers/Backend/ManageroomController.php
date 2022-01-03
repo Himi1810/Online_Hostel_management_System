@@ -19,12 +19,23 @@ class ManageroomController extends Controller
     }
 
     public function store(Request $request){
+
+        // dd($request->all());
+        $filename='';
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = date('Ymdhms').'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads/manageroom',$filename);
+            
+        }
+
         Manageroom::create([
             'student_id'=>$request->student_id,
             'room_name'=>$request->room_name,
             'room_type'=>$request->room_type,
             'room_fee'=>$request->room_fee,
             'allocative'=>$request->allocative,
+            'image'=>$filename
            
 
             

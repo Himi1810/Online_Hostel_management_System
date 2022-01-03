@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('main')
 
-<form action="{{route('manageroom.store')}}"method='post'>
+<form action="{{route('manageroom.store')}}"method='post' enctype="multipart/form-data" >
     @csrf
 
     <div class="mb-3">
@@ -31,6 +31,10 @@
     </select>
   </div>
 </div>
+<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Photo</label>
+    <input type="file" name="image" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
 
   
  

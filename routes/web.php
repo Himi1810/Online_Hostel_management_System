@@ -19,6 +19,8 @@ use App\Http\Controllers\Frontend\ServicesController;
 use App\Http\controllers\Backend\manageroomController;
 use App\Http\controllers\Backend\roombookingController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\ShowroomController;
+
 
 
 
@@ -81,6 +83,9 @@ Route::get('/user/profile/accept/{id}',[UserprofileController::class,'userprofil
 // Route::get('/user/profile/edit/{id}',[UserprofileController::class,'userprofile_edit'])->name('userprofile.edit');
 // Route::put('/user/profile/update/{id}',[UserprofileController::class,'userprofile_update'])->name('userprofile.update');
 
+
+//showroom
+Route::get('/showroom',[ShowroomController::class,'showroom'])->name('website.showroom');
 
    // Registration  part
    Route::get('/user/registration',[LoginController::class,'registrationform'])->name('user.registration');
