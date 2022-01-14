@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class EmployeeRegistrationController extends Controller
@@ -10,12 +11,12 @@ class EmployeeRegistrationController extends Controller
     public function employeereg()
     {
        
-        return view('website.partials.employeeregistration');
+        return view('website.partials.employee_registration');
     }
 
     public function doemployeeregistration(Request $request){
        
-        user::create([
+        User::create([
             'name'=>$request->name,
             'email'=>$request->email,
             'phone_number'=>$request->phone,
