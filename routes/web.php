@@ -20,6 +20,9 @@ use App\Http\controllers\Backend\manageroomController;
 use App\Http\controllers\Backend\roombookingController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ShowroomController;
+use App\Http\Controllers\Frontend\ShowmealController;
+use App\Http\Controllers\Frontend\EmployeeRegistrationController;
+
 
 
 
@@ -67,6 +70,13 @@ Route::get('about',[AboutController::class,'about'])->name('website.about');
 //contact
 Route::get('contact',[ContactController::class,'contact'])->name('website.contact');
 
+//employeeregistration
+Route::get('/website/employee/registration',[EmployeeRegistrationController::class,'employeereg'])->name('employee.registration');
+Route::post('/website/employee/registration/store',[EmployeeRegistrationController::class,'doemployeeregistration'])->name('website.do.employee.employeeregistation');
+
+
+
+
 //requestform
 // Route::get('request',[RequestController::class,'request'])->name('website.request');
 // Route::get('/website/request/form',[RequestController::class,'requestform'])->name('website.form');
@@ -86,6 +96,10 @@ Route::get('/user/profile/accept/{id}',[UserprofileController::class,'userprofil
 
 //showroom
 Route::get('/showroom',[ShowroomController::class,'showroom'])->name('website.showroom');
+
+//showmeal
+Route::get('/showmeal',[ShowmealController::class,'showmeal'])->name('website.showmeal');
+
 
    // Registration  part
    Route::get('/user/registration',[LoginController::class,'registrationform'])->name('user.registration');

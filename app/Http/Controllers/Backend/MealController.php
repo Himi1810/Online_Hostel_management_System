@@ -19,11 +19,25 @@ class MealController extends Controller
         return view('admin.layouts.meal_form');
     }
 
+
+
     public function store(Request $request){
+
+        //   dd($request->all());
+        $filename='';
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = date('Ymdhms').'.'.$file->getClientOriginalExtension();
+            // dd($filename);
+            $file->storeAs('/uploads/meal',$filename);
+            
+        }
         Meal::create([
+            'student_id'=>$request->student_id,
             'meal_category'=>$request->meal_category,
             'meal_fee'=>$request->meal_fee,
             'meal_history'=>$request->meal_history,
+            'image'=>$filename
 
             
 
@@ -67,7 +81,7 @@ $meal=Meal::find($id);
 // dd($meal);
 if($meal){
     $meal->update([
-
+        'student_id'=>$request->student_id,
         'meal_category'=>$request->meal_category,
         'meal_fee'=>$request->meal_fee,
         'meal_history'=>$request->meal_history,

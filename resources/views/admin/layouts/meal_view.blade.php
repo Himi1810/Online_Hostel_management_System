@@ -3,10 +3,13 @@
 
 <div id="divToPrint">
 <h1>Meal Details</h1>
-
+                             <p>Student ID {{$meal->student_id}}</p>
                               <p>Meal Category {{$meal->meal_category}}</p>
                               <p>Meal Fee {{$meal->meal_fee}}</p>
                               <p>Meal History {{$meal->meal_history}}</p>
+                              <p>
+                                  <img width="100px" src="{{url('/uploads/meal/'.$meal->image)}}" alt="">
+                              </p>
                              
 
     </div>

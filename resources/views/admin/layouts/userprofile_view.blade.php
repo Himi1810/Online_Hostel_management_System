@@ -5,7 +5,6 @@
 
                               <p>Name {{$usertable->full_name}}</p>
                               <p>Email {{$usertable->email}}</p>
-                
                               <p>Date {{$usertable->date}}</p>
                               <p>Phone Number{{$usertable->phone_number}}</p>
                               <p>Description {{$usertable->description}}</p>
