@@ -14,10 +14,20 @@ class AdminTableSeeder extends Seeder
     public function run()
     {
         User::create([
+            'name'=>'employee',
+            'email'=>'employee123@gmail.com',
+            'password'=>bcrypt('employee'),
+            'role'=>'employee'
+         ]);
+         
+        User::create([
            'name'=>'admin',
            'email'=>'admin123@gmail.com',
            'password'=>bcrypt('12345'),
            'role'=>'admin'
         ]);
+
+        
     }
+
 }

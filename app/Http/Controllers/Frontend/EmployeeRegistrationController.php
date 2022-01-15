@@ -10,7 +10,6 @@ class EmployeeRegistrationController extends Controller
 {
     public function employeereg()
     {
-       
         return view('website.partials.employee_registration');
     }
 

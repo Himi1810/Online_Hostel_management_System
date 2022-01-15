@@ -21,6 +21,7 @@ use App\Http\controllers\Backend\roombookingController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Frontend\ShowroomController;
 use App\Http\Controllers\Frontend\ShowmealController;
+use App\Http\Controllers\Frontend\ShowinfoController;
 use App\Http\Controllers\Frontend\EmployeeRegistrationController;
 
 
@@ -99,6 +100,10 @@ Route::get('/showroom',[ShowroomController::class,'showroom'])->name('website.sh
 
 //showmeal
 Route::get('/showmeal',[ShowmealController::class,'showmeal'])->name('website.showmeal');
+
+//showhostelinfo
+Route::get('/showinfo',[ShowinfoController::class,'showinfo'])->name('website.showinfo');
+
 
 
    // Registration  part
@@ -202,10 +207,6 @@ Route::get('/admin/meal/view/{id}',[MealController::class,'meal_view'])->name('m
 Route::get('/admin/meal/delete/{id}',[MealController::class,'meal_delete'])->name('meal.delete');
 Route::get('/admin/meal/edit/{id}',[MealController::class,'meal_edit'])->name('meal.edit');
 Route::put('/admin/meal/update/{id}',[MealController::class,'meal_update'])->name('meal.update');
-
-
-
-
 
 
 

@@ -2,13 +2,15 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
+
+                        @if(auth()->user()->role ==="admin")
                     
                             <a class="nav-link" href="{{route('admin.dashboard')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
                        
-                            <div class="sb-sidenav-menu-heading">Addons</div>
+                            <div class="sb-sidenav-menu-heading">Feature</div>
                             <!-- <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 Admin -->
@@ -37,14 +39,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Payment
                             </a>
-                            <a class="nav-link" href="{{route('admin.meal')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-hamburger"></i></div>
-                                Meal
-                            </a>
-                            <a class="nav-link" href="{{route('admin.visitor')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
-                                Visitor
-                            </a>
+                    
                             <a class="nav-link" href="{{route('admin.notice')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Notice
@@ -58,6 +53,18 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Report
                             </a>
+
+                            
+                            @elseif(auth()->user()->role ==="employee")
+                            <a class="nav-link" href="{{route('admin.meal')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-hamburger"></i></div>
+                                Meal
+                            </a>
+                            <a class="nav-link" href="{{route('admin.visitor')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
+                                Visitor
+                            </a>
+                            @endif
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">

@@ -20,13 +20,20 @@ class HostelController extends Controller
     }
     public function store(Request $request)
     {
-        // dd($request->all());
+        //  dd($request->all());
+        $filename='';
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = date('Ymdhms').'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads/hostel',$filename);
+        }
+
         Hostel::create([
-            'number_of_rooms'=>$request->number_of_rooms,
+            'name_of_the_hostel'=>$request->name_of_the_hostel,
             'hostel_location'=>$request->hostel_location,
             'hostel_type'=>$request->hostel_type,
             'Total_rooms'=>$request->total_rooms,
-            'name_of_the_hostel'=>$request->name_of_the_hostel,
+            'image'=>$filename,
 
 
         ]);
@@ -72,11 +79,10 @@ public function hostel_information_update($id,Request $request){
     if($hostel){
         $hostel->update([
 
-            'number_of_rooms'=>$request->number_of_rooms,
+            'name_of_the_hostel'=>$request->name_of_the_hostel,
             'hostel_location'=>$request->hostel_location,
             'hostel_type'=>$request->hostel_type,
             'Total_rooms'=>$request->total_rooms,
-            'name_of_the_hostel'=>$request->name_of_the_hostel,
 
         ]);
         return redirect()->route('admin.hostel_informationlist'); 
