@@ -21,6 +21,7 @@ class EmployeeRegistrationController extends Controller
             'phone_number'=>$request->phone,
             'address'=>$request->address,
             'password'=>bcrypt( $request->password),
+            'role' => 'employee'
         ]);
         return redirect()->route('user.login');
 

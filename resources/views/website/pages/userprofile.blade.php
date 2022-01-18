@@ -78,16 +78,16 @@ body{
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
-                      <h4>Habiba Akter</h4>
-                      <p class="text-secondary mb-1">Full Stack Developer</p>
-                      <p class="text-muted font-size-sm">uttara,Dhaka,Bangladesh</p>
+                      <h4>{{auth()->user()->name}}</h4>
+                      <p class="text-secondary mb-1">{{auth()->user()->email}}</p>
+                      <p class="text-muted font-size-sm">{{auth()->user()->phone_number}}</p>
                       <!-- <button class="btn btn-primary">Follow</button>
                       <button class="btn btn-outline-primary">Message</button> -->
                     </div>
                   </div>
                 </div>
               </div>
-              
+            
             </div>
             <div class="col-md-8">
               <div class="card mb-3">
@@ -97,17 +97,10 @@ body{
   <div class="col-md-1" >
   </div>
   <div class="col-md-10">
-  <form action="{{route('website.profile.store')}}"method='post'>
+  <form action="{{route('website.profile.booking',$room->id)}}"method='post'>
     @csrf
                        <h1>REQUEST fORM</h1>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Student ID</label>
-    <input type="number" name="student_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
-  <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Seat ID</label>
-    <input type="number" name="seat_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
+ 
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Booking Date</label>
     <input type="date" name="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">

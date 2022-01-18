@@ -5,8 +5,12 @@
     @csrf
 
     <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Enter Your Student ID</label>
-    <input type="number" name="student_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <label for="exampleInputEmail1" class="form-label">Enter Your Hostel ID</label>
+    <select name="hostel_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    @foreach($hostels as $hostel)
+      <option value="{{$hostel->id}}">{{$hostel->name_of_the_hostel}}</option>
+      @endforeach
+</select>
   </div>
 
     <div class="mb-3">

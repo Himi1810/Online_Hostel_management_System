@@ -85,8 +85,8 @@ Route::post('/website/employee/registration/store',[EmployeeRegistrationControll
 
 //userrequest
 Route::get('/user/profile/list',[UserprofileController::class,'userprofile_list'])->name('admin.layouts.userprofile_list');
-Route::get('/user/profile',[UserprofileController::class,'userprofile'])->name('website.pages.userprofile');
-Route::post('/user/store/profile',[UserprofileController::class,'store'])->name('website.profile.store');
+Route::get('/user/booking-form/{id}',[UserprofileController::class,'bookingForm'])->name('website.pages.booking');
+Route::post('/user/booking/{id}',[UserprofileController::class,'booking'])->name('website.profile.booking');
 Route::get('/user/profile/view/{id}',[UserprofileController::class,'userprofile_view'])->name('userprofile.view');
 Route::get('/user/profile/reject/{id}',[UserprofileController::class,'userprofile_reject'])->name('userprofile.reject');
 Route::get('/user/profile/accept/{id}',[UserprofileController::class,'userprofile_accept'])->name('userprofile.accept');
@@ -195,6 +195,7 @@ Route::get('/admin/manageroom/view/{id}',[ManageroomController::class,'manageroo
 Route::get('/admin/manageroom/delete/{id}',[ManageroomController::class,'manageroom_delete'])->name('manageroom.delete');
 Route::get('/admin/manageroom/edit/{id}',[ManageroomController::class,'manageroom_edit'])->name('manageroom.edit');
 Route::put('/admin/manageroom/update/{id}',[ManageroomController::class,'mangeroom_update'])->name('manageroom.update');
+Route::get('/room/hostelroom/{id}',[ShowroomController::class,'hostelWiseRoom'])->name('manageroom.hostelroom');
 
 
 

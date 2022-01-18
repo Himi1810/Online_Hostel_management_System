@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Userrequest;
+use App\Models\Roombooking;
+use App\Models\Manageroom;
 use Illuminate\Http\Request;
 
 class UserprofileController extends Controller
@@ -14,23 +16,20 @@ class UserprofileController extends Controller
         return view('admin.layouts.userprofile_list',compact('usertable'));
     }
 
-    public function userprofile(){
-        return view('website.pages.userprofile');
+    public function bookingForm($id){
+        $room = Manageroom::find($id);
+        return view('website.pages.userprofile',compact('room'));
     }
 
-    public function store(Request $request){
-
+    public function booking(Request $request,$id){
+        $room = Manageroom::find($id);
+    
         Userrequest::create([
-
-            'student_id'=>$request->student_id,
-            'seat_id'=>$request->seat_id,
+            'student_id'=>auth()->user()->id,
+            'seat_id'=>$room->id,
             'booking_date'=>$request->date,
             'email'=>$request->email,
             'description'=>$request->send_request,
-           
-
-
-
         ]);
         return redirect()->route('website.home');
     }
@@ -44,19 +43,14 @@ class UserprofileController extends Controller
 
 
     
-    
+
 
     public function userprofile_accept($id){
-    //  dd($id);
-        // $usertable=Userrequest::all();
         $usertable=Userrequest::find($id);
-        //  dd($usertable);
         if($usertable){
             $usertable->update([
                 'status'=>'approve'
             ]);
-            
-            
         }
         return redirect()->back();
 }

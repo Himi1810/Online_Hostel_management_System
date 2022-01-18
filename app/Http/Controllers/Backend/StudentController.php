@@ -3,13 +3,13 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Student;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
     public function studentlist(){
-        $students = student::all();
+        $students = User::where('role','student')->orderBy('id','desc')->get();
         // dd($students);
         return view('admin.layouts.student_list',compact('students'));
     }
@@ -27,7 +27,7 @@ class StudentController extends Controller
             $file->storeAs('/uploads/student',$filename);
             
         }
-        Student::create([
+        User::create([
             'name'=>$request->name,
             'nid'=>$request->nid,
             'email' => $request->email,
@@ -39,13 +39,13 @@ class StudentController extends Controller
     }
 
     public function student_view($id){
-        $student=Student::find($id);
+        $student=User::find($id);
 
         return view('admin.layouts.student_view',compact('student'));
     }
 
     public function student_delete($id){
-        $student=Student::find($id);
+        $student=User::find($id);
             // dd($student);
               if($student){
                       $student->delete();
@@ -57,7 +57,7 @@ class StudentController extends Controller
     public function student_edit($id){
      
         // $student=Student::all();
-        $student=Student::find($id);
+        $student=User::find($id);
         // dd($student);
         if($student){
 
@@ -68,7 +68,7 @@ class StudentController extends Controller
 public function student_update($id,Request $request){
      
     // $student=Student::all();
-    $student=Student::find($id);
+    $student=User::find($id);
     // dd($student);
     if($student){
         $student->update([

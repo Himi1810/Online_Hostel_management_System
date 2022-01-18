@@ -7,7 +7,9 @@
                               <p>Room Name{{$manageroom->room_name}}</p>
                               <p>Room Type{{$manageroom->room_type}}</p>
                               <p>Room Fee{{$manageroom->room_fee}}</p>
-                              <p>Image {{$manageroom->image}}</p>
+                              <p>Image 
+                                  <img width="300px;" src="{{url('uploads/manageroom/',$manageroom->image)}}" alt="">
+                                </p>
                               <p>Room Name{{$manageroom->allocative}}</p>
                               
     </div>

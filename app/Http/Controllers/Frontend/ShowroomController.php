@@ -12,4 +12,11 @@ class ShowroomController extends Controller
         $managerooms =manageroom::all();
         return view('website.pages.showroom',compact('managerooms'));
     }
+
+
+    public function hostelWiseRoom($id){
+
+        $managerooms=Manageroom::where('hostel_id',$id)->get();
+        return view('website.pages.showroom',compact('managerooms'));
+    }
 }

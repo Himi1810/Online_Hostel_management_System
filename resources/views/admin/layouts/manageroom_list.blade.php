@@ -16,13 +16,14 @@
                   DataTable
               </div>
               <div>
-                
+
+
               </div>
               <div class="card-body">
                   <table id="datatablesSimple">
                       <thead>
                           <tr>
-                              <th>Student ID</th>
+                              <th>Hostel ID</th>
                               <th>Room Name</th>
                               <th>Room Type</th>
                               <th>Room Fee</th>
@@ -37,7 +38,7 @@
                       <tbody>
                       @foreach($managerooms as $manageroom)
                           <tr>
-                              <td>{{$manageroom->student_id}}</td>
+                              <td>{{$manageroom->hostel_id}}</td>
                               <td>{{$manageroom->room_name}}</td>
                               <td>{{$manageroom->room_type}}</td>
                               <td>{{$manageroom->room_fee}}</td>

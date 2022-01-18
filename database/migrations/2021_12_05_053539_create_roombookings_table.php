@@ -17,10 +17,9 @@ class CreateRoombookingsTable extends Migration
             $table->id();
             $table->integer('seat_id');
             $table->integer('student_id');
-           
-            $table->string('booking_date');
-            $table->string('room_status');
-            $table->string('room_fee');
+            $table->string('booking_date');         
+            $table->string('status');
+
             $table->timestamps();
         });
     }

@@ -23,13 +23,24 @@ class LoginController extends Controller
         return view('website.login');
     }
     public function store(Request $request){
-        //  dd($request->all());
+       
+        // dd($request->all());
+        $filename='';
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = date('Ymdhms').'.'.$file->getClientOriginalExtension();
+            $file->storeAs('/uploads/login',$filename);
+            
+        }
         User::create([
             'name'=>$request->name,
             'email'=>$request->email,
-            'phone_number'=>$request->phone,
+            'phone_number'=>$request->phone_number,
             'address'=>$request->address,
+            'nid'=>$request->nid,
+            'image'=>$filename,
             'password'=>bcrypt( $request->password),
+            'role' => 'student'
         ]);
         return redirect()->route('user.login');
     }

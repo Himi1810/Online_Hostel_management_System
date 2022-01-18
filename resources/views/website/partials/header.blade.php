@@ -22,8 +22,6 @@
             <li><a class="nav-link scrollto" href="{{route('user.login')}}">Log In</a></li>
           @endif
 
-          <li>@auth<a class="nav-link scrollto" href="{{route('website.pages.userprofile')}}">User Request</a>@endauth</li>
-
          
           <li>@auth<a class="nav-link scrollto" href="#contact">Contact</a>@endauth</li>
         

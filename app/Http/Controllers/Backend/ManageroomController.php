@@ -4,18 +4,23 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Manageroom;
+use App\Models\Hostel;
+
 use Illuminate\Http\Request;
 
 class ManageroomController extends Controller
 {
     public function manageroomlist(){
-        $managerooms = Manageroom::all();
+        $managerooms = Manageroom::orderBy('id','desc')->get();
         // dd($managerooms);
        
         return view('admin.layouts.manageroom_list',compact('managerooms'));
     }
     public function manageroomform(){
-        return view('admin.layouts.manageroom_form');
+
+        $hostels = Hostel::all();
+       
+        return view('admin.layouts.manageroom_form',compact('hostels'));
     }
 
     public function store(Request $request){
@@ -30,7 +35,7 @@ class ManageroomController extends Controller
         }
 
         Manageroom::create([
-            'student_id'=>$request->student_id,
+            'hostel_id'=>$request->hostel_id,
             'room_name'=>$request->room_name,
             'room_type'=>$request->room_type,
             'room_fee'=>$request->room_fee,
@@ -43,6 +48,8 @@ class ManageroomController extends Controller
         ]);
         return redirect()->back(); 
 }
+
+
 
 public function manageroom_view($id){
     $manageroom=Manageroom::find($id);
@@ -79,7 +86,7 @@ $manageroom=Manageroom::find($id);
 // dd($manageroom);
 if($manageroom){
     $manageroom->update([
-        'student_id'=>$request->student_id,
+        'student_id'=>$request->hostel_id,
         'room_name'=>$request->room_name,
         'room_type'=>$request->room_type,
         'room_fee'=>$request->room_fee,
