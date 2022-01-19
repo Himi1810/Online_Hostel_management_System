@@ -6,7 +6,11 @@
 
     <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Student ID</label>
-    <input type="number" name="student_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <select name="student_id" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    @foreach($students as $student)
+      <option value="{{$student->id}}">{{$student->name}}</option>
+      @endforeach
+</select>
   </div>
 
   <div class="mb-3">

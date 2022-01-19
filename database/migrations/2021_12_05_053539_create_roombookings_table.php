@@ -18,7 +18,7 @@ class CreateRoombookingsTable extends Migration
             $table->integer('seat_id');
             $table->integer('student_id');
             $table->string('booking_date');         
-            $table->string('status');
+            $table->string('status')->default('pending');
 
             $table->timestamps();
         });

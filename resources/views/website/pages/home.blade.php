@@ -59,14 +59,14 @@
     </section><!-- End Counts Section -->
 
     <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us section-bg">
+    <!-- <section id="why-us" class="why-us section-bg">
       <div class="container-fluid" data-aos="fade-up">
 
         <div class="row">
 
          
 
-          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch">
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch"> -->
 
             
 
@@ -96,8 +96,9 @@
           <h2>Services</h2>
           <p>Check our Services</p>
         </div>
-
+<div>
         <div class="row">
+         
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
@@ -121,6 +122,9 @@
               <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
             </div>
           </div>
+</div>
+
+</div>
 
           
     </section>

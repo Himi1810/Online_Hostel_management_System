@@ -2,23 +2,23 @@
 @section('main')
 
 <div id="divToPrint">
+    <div style="text-align:center;">
 <h1>Manage Room Details</h1>
                               <p>Room Name{{$manageroom->student_id}}</p>
                               <p>Room Name{{$manageroom->room_name}}</p>
                               <p>Room Type{{$manageroom->room_type}}</p>
                               <p>Room Fee{{$manageroom->room_fee}}</p>
-                              <p>Image 
+                              <p>Image </p>
                                   <img width="300px;" src="{{url('uploads/manageroom/',$manageroom->image)}}" alt="">
                                 </p>
                               <p>Room Name{{$manageroom->allocative}}</p>
                               
-    </div>
     <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
 
 
+</div>
 
-
-
+</div>
 @endsection
 
 <script language="javascript">

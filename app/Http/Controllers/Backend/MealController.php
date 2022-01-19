@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
+
 use App\Models\Meal;
 
 use Illuminate\Http\Request;
@@ -16,14 +18,16 @@ class MealController extends Controller
     }
 
     public function mealform(){
-        return view('admin.layouts.meal_form');
+
+        $students = User::where('role','student')->orderBy('id','desc')->get();
+        return view('admin.layouts.meal_form',compact('students'));
     }
 
 
 
     public function store(Request $request){
 
-        //   dd($request->all());
+        //    dd($request->all());
         $filename='';
         if ($request->hasFile('image')) {
             $file = $request->file('image');

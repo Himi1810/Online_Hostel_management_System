@@ -19,6 +19,8 @@ class AdminTableSeeder extends Seeder
             'password'=>bcrypt('employee'),
             'role'=>'employee'
          ]);
+
+         
          
         User::create([
            'name'=>'admin',

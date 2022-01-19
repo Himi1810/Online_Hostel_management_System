@@ -19,7 +19,7 @@ class StudentController extends Controller
     }
 
     public function store(Request $request){
-        // dd($request->all());
+        //  dd($request->all());
         $filename='';
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -33,7 +33,9 @@ class StudentController extends Controller
             'email' => $request->email,
             'phone_number'=>$request->phone_number,
             'address'=>$request->address,
-            'image'=>$filename
+            'password'=>bcrypt($request->password),
+            'image'=>$filename,
+            'role'=>'student'
         ]);
         return redirect()->back(); 
     }

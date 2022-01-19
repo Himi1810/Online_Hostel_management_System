@@ -44,7 +44,7 @@
    @include('website.partials.header')
 
   <!-- ======= Hero Section ======= -->
-  <main id="main">
+  <main id="main" style="position: relative;">
 
    @yield('contents')
   <!-- ======= Footer ======= -->

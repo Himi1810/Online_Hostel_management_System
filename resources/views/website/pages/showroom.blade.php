@@ -6,7 +6,7 @@
       <h3 class="m_3">Our Room Lists</h3>
       <div class="close_but"><i class="close1"> </i></div>
 <br>
-      <div class="card-header">Manage room for Student({{count($managerooms)}}room)</div>
+     <div class="card-header" style="text-align:center; background-color:blue" >Manage room for Student({{count($managerooms)}}room)</div>
 <br>
             <div class="row">
                   @foreach($managerooms as $key=>$item)

@@ -4,7 +4,7 @@
 <div class="container-fluid px-4">
           <h1 class="mt-4">User Request list</h1>
 
-          <a href="{{route('website.pages.userprofile')}}" class="btn btn-success" style="float:right;">Add new</a>
+          <a href="{{route('admin.layouts.userprofile_list')}}" class="btn btn-success" style="float:right;">Add new</a>
           <ol class="breadcrumb mb-4">
               <!-- <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li> -->
               <li class="breadcrumb-item active">Tables</li>
@@ -41,12 +41,13 @@
                               <td>{{$usertable->email}}</td>
                               <td>{{$usertable->description}}</td>
                               <td>
-                                  @if($usertable->status == 'accept')
-                              <a class="btn btn-danger" href="{{route('userprofile.reject',$usertable->id)}}" >Reject</a>
+                                  @if($usertable->status == "accept")
+                              <a class="btn btn-danger" href="{{route('userprofile.reject',$usertable->id)}}">Reject</a>
                                 @else
-                              <a class="btn btn-primary" href="{{route('userprofile.accept',$usertable->id)}}" >Accept</a>
+                              <a class="btn btn-primary" href="{{route('userprofile.accept',$usertable->id)}}">Accept</a>
                               @endif
-                              <a class="btn btn-success" href="{{route('userprofile.view',$usertable->id)}}" >View</a>
+                              <a class="btn btn-success" href="{{route('userprofile.view',$usertable->id)}}">View</a>
+                              <a class="btn btn-danger" href="{{route('payment.form')}}">Add Payment</a>
                              
                               </td>
                               

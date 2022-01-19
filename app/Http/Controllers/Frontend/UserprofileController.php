@@ -47,13 +47,23 @@ class UserprofileController extends Controller
 
     public function userprofile_accept($id){
         $usertable=Userrequest::find($id);
+  
         if($usertable){
             $usertable->update([
                 'status'=>'approve'
             ]);
         }
-        return redirect()->back();
-}
+
+        Roombooking::create([
+
+            'student_id'=>$usertable->student_id,
+            'seat_id'=>$usertable->seat_id,
+            'booking_date'=>$usertable->booking_date,
+            'status'=> 'approved',
+        ]);
+
+        return redirect()->route('admin.roombooking');
+    }
 
 public function userprofile_reject($id){
     // dd($id);

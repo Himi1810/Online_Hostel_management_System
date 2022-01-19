@@ -23,6 +23,8 @@ use App\Http\Controllers\Frontend\ShowroomController;
 use App\Http\Controllers\Frontend\ShowmealController;
 use App\Http\Controllers\Frontend\ShowinfoController;
 use App\Http\Controllers\Frontend\EmployeeRegistrationController;
+use App\Http\Controllers\Frontend\StudentprofileController;
+
 
 
 
@@ -103,6 +105,11 @@ Route::get('/showmeal',[ShowmealController::class,'showmeal'])->name('website.sh
 
 //showhostelinfo
 Route::get('/showinfo',[ShowinfoController::class,'showinfo'])->name('website.showinfo');
+
+//studentprofile
+Route::get('/student/profile/list',[StudentprofileController::class,'studentprofile'])->name('website.pages.studentprofile');
+
+
 
 
 

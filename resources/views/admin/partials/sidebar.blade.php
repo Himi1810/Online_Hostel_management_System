@@ -63,7 +63,11 @@
                             </a>
 
                             
-                            @elseif(auth()->user()->role ==="employee")
+
+
+
+                            
+                            @elseif(auth()->user()->role == "employee")
                             <a class="nav-link" href="{{route('admin.meal')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-hamburger"></i></div>
                                 Meal
@@ -72,6 +76,9 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Visitor
                             </a>
+
+                           
+
                             @endif
                         </div>
                     </div>

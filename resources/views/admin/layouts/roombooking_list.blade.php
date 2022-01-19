@@ -35,8 +35,8 @@
                       <tbody>
                       @foreach($roombookings as $roombooking)
                           <tr>
-                              <td>{{$roombooking->seat_id}}</td>
-                              <td>{{$roombooking->student_id}}</td>
+                              <td>{{$roombooking->room->room_name}}</td>
+                              <td>{{$roombooking->student->name}}</td>
                               <td>{{$roombooking->booking_date}}</td>
                               <td>{{$roombooking->status}}</td>
                              
