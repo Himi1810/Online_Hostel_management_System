@@ -15,6 +15,15 @@
             </div>
           </div>
         </div>
+        <div class="carousel-item active" style="background-image:url('website/assets/img/slide/slide-2.jpg')">
+          <div class="carousel-container">
+            <div class="container">
+              <h2 class="animate__animated animate__fadeInDown"><span>Welcome To Online Hostel Management System</span></h2>
+              <p class="animate__animated animate__fadeInUp">An online hostel management system ensures that record management and flawless execution of administrative tasks such as managing hostel application,allotment of rooms,payment management,meal management and easy communication with students and parents</p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">hfhuf</a>
+            </div>
+          </div>
+        </div>
 
        
         
