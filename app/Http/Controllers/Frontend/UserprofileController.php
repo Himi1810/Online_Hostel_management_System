@@ -21,6 +21,14 @@ class UserprofileController extends Controller
         return view('website.pages.userprofile',compact('room'));
     }
 
+    Public function viewseat(){
+        // dd(auth()->user());
+        $userRequest = Userrequest::where('student_id',auth()->user()->id)->get();
+
+        return view('website.pages.viewseat',compact('userRequest'));
+
+    }
+
     public function booking(Request $request,$id){
         $room = Manageroom::find($id);
     

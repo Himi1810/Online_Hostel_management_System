@@ -74,6 +74,6 @@
 </div>
 
 <div style="position: absolute; top: 139px; left: 262px;">
-  <h1 style="color: white; font-weight: bold;"> Welcome to Online Hostel Management System </h1>
+  <h1 style="color: white; font-weight: bold; "> Welcome to Online Hostel Management System </h1>
 
 </div>

@@ -109,6 +109,8 @@ Route::get('/showinfo',[ShowinfoController::class,'showinfo'])->name('website.sh
 //studentprofile
 Route::get('/student/profile/list',[StudentprofileController::class,'studentprofile'])->name('website.pages.studentprofile');
 
+//viewseat
+Route::get('/viewbookseat',[UserprofileController::class,'viewseat'])->name('website.viewseat');
 
 
 

@@ -99,7 +99,12 @@ body{
   <div class="col-md-10">
   <form action="{{route('website.profile.booking',$room->id)}}"method='post'>
     @csrf
+                <div style="text-align:center;">
                        <h1>REQUEST fORM</h1>
+                
+      <br>
+
+</br>
  
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Booking Date</label>
@@ -118,6 +123,7 @@ body{
   
  
   <button type="submit" class="btn btn-primary">Send Request</button>
+  <a class="btn btn-primary" href="{{route('website.viewseat')}}">View</a>
 </form>
 </div>
   <div class="col-md-1">

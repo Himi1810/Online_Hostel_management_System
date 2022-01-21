@@ -113,6 +113,7 @@ body{
                               <th>Meal Fee</th>
                               <th>Meal History</th>
                               <th>Image</th>
+                              
                         
                               
                           </tr>
@@ -128,6 +129,7 @@ body{
                               <td>
                                   <img width="70px" src="{{url('/uploads/meal/'.$meal->image)}}" alt="">
                               </td>
+                              
                               
                           </tr>
                           @endforeach
