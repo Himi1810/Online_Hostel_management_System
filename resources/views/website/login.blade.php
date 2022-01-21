@@ -22,6 +22,7 @@
   </head>
 
   <body class="text-center">
+  <div class="container" style="margin-left:400px; padding-right:700px;">
     <form action="{{route('login.dologin')}}" method="POST" class="form-signin">
       @csrf
       <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">

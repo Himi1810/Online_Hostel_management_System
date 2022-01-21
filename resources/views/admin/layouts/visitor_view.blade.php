@@ -3,6 +3,7 @@
 @section('main')
 
 <div id="divToPrint">
+<div style="text-align:center;">
 <h1>Visitor Details</h1>                   
                               
                               
@@ -15,9 +16,12 @@
                               <img width="100px" src="{{url('/uploads/visitor/'.$visitor->image)}}" alt="">
                               </p>
 
-    </div>
+  
     <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
 
+    </div>
+
+</div>
                              
 @endsection
 

@@ -3,22 +3,20 @@
 
 <div id="divToPrint">
 <div style="text-align:center;">
-<h1>Notice Details</h1>
+<h1>Report Generate</h1> 
 
-                              <p>Notice Date {{$notice->notice_date}}</p>
-                              <p>Notice Title {{$notice->notice_title}}</p>
-                              <p>Notice Description {{$notice->notice_description}}</p>
 
-   
-    <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">                   
+
+
+
+
+
+<input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
 
     </div>
 
 </div>
-
-
-
-
+                             
 @endsection
 
 <script language="javascript">

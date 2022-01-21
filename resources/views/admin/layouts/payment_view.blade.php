@@ -2,6 +2,7 @@
 @section('main')
 
 <div id="divToPrint">
+<div style="text-align:center;">
 <h1>Payment</h1>
                                <p>Student ID {{$payment->student_id}}</p>
                               <p>Amount {{$payment->amount}}</p>
@@ -10,8 +11,11 @@
                               <p>Payment Method {{$payment->payment_method}}</p>
                             
 
-     </div>
+    
     <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
+    </div>
+
+</div>
 
 
 

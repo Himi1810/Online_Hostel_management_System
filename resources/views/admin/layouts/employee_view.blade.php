@@ -2,6 +2,7 @@
 @section('main')
 
 <div id="divToPrint">
+<div style="text-align:center;">
 <h1>employee List</h1>
 
 
@@ -10,15 +11,16 @@
                               <p>NId :{{$employee->nid}}</p>
                             <p> Phone Number :{{$employee->phone_number}}</p>
                              <p>Email:{{$employee->email}}</p>
-                                <p>Address: <h4><span style="color: orange">BDT {{$employee->address}}</span></h4> </p>
-                               
-                               <p>
+                                <p>Address: {{$employee->address}} </p>
+                               <p>Image</p>
                                   <img style="border-radius: 4px;" width="200px;" src=" {{url('/uploads/employee'.$employee->image)}}" alt=" image">
                                     </p>
 
-     </div>
+    
     <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
+    </div>
 
+</div>
 
 
 

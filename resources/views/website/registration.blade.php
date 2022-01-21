@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Signin </title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
 
@@ -22,6 +22,7 @@
   </head>
 
   <body>
+  <body class="text-center">
     <div class="container" style="margin-left:300px; padding-right:400px;">
 <form action="{{route('registration.store')}}" method="POST" class="form-signin"> 
         @csrf

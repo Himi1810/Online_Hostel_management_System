@@ -54,11 +54,7 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="{{url('website/Image/s1.jpg')}}" style="height: 500px;" class="d-block w-100" alt="...">
-      <!-- <div class="carousel-container">
-            <div class="container">
-              <h2 class="animate__animated animate__fadeInDown"><span>Welcome To Online Hostel Management System</span></h2>
-              <p class="animate__animated animate__fadeInUp">An online hostel management system ensures that reco</p>
-</div> -->
+      
     </div>
     <div class="carousel-item">
       <img src="{{url('website/Image/s2.jpg')}}" style="height: 500px;" class="d-block w-100" alt="...">
@@ -78,6 +74,6 @@
 </div>
 
 <div style="position: absolute; top: 139px; left: 262px;">
-  <h1 style="color: white; font-weight: bold;"> Welcome to Hostel management </h1>
+  <h1 style="color: white; font-weight: bold;"> Welcome to Online Hostel Management System </h1>
 
 </div>

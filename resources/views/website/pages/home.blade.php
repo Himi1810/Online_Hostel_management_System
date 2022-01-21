@@ -17,22 +17,19 @@
         <div class="row content">
           <div class="col-lg-6">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+              Hostel is a place which is just like second home for the student who lives outside from the home they feel save while living in hostel.
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
-              <li><i class="ri-check-double-line"></i> Duis aute irure dolor in reprehenderit in voluptate velit</li>
-              <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
+              <li><i class="ri-check-double-line"></i> To maintain and manage the hostel information easily</li>
+              <li><i class="ri-check-double-line"></i> To provide data access through the students and employees according to their roles.</li>
+              <li><i class="ri-check-double-line"></i> To avoid the complexity and to reduce time in data processing</li>
             </ul>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-              culpa qui officia deserunt mollit anim id est laborum.
+              The Online hostel management system will work and updated the students and staffs records,visitors record,students fees record,hostel buildings and room records,notice view process,room fees,meal fees and seat allotment process can be done through online.This system automatically calculates the room fee and meal fee etc.
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            <!-- <a href="#" class="btn-learn-more">Learn More</a> -->
           </div>
         </div>
 
@@ -103,7 +100,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bxl-dribbble"></i></div>
               <h4><a href="{{route('website.showinfo')}}">Hostel Information</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              <!-- <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p> -->
             </div>
           </div>
 
@@ -111,7 +108,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-file"></i></div>
               <h4><a href="{{route('website.showroom')}}">Manage Room</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              <!-- <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p> -->
             </div>
           </div>
 
@@ -119,7 +116,7 @@
             <div class="icon-box">
               <div class="icon"><i class="bx bx-tachometer"></i></div>
               <h4><a href="{{route('website.showmeal')}}">Meal Details</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p> -->
             </div>
           </div>
 </div>

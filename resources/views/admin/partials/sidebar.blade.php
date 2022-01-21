@@ -36,7 +36,7 @@
                                 Room Booking
                             </a>
                             <a class="nav-link" href="{{route('admin.payment')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+                                <div class="sb-nav-link-icon"><i class="fa fa-credit-card"></i></div>
                                 Payment
                             </a>
                     
@@ -49,10 +49,7 @@
                                 User Request
                             </a>
                             
-                            <a class="nav-link" href="{{route('admin.report')}}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Report
-                            </a>
+                            
                             <a class="nav-link" href="{{route('admin.meal')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-hamburger"></i></div>
                                 Meal
@@ -60,6 +57,10 @@
                             <a class="nav-link" href="{{route('admin.visitor')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Visitor
+                            </a>
+                            <a class="nav-link" href="{{route('admin.report')}}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-bell"></i></div>
+                                Report
                             </a>
 
                             
