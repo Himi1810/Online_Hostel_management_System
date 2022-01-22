@@ -40,10 +40,10 @@
                                 Payment
                             </a>
                     
-                            <a class="nav-link" href="{{route('admin.notice')}}">
+                            <!-- <a class="nav-link" href="{{route('admin.notice')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Notice
-                            </a>
+                            </a> -->
                             <a class="nav-link" href="{{route('admin.layouts.userprofile_list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
                                 User Request

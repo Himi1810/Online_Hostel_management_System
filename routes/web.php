@@ -112,6 +112,16 @@ Route::get('/student/profile/list',[StudentprofileController::class,'studentprof
 //viewseat
 Route::get('/viewbookseat',[UserprofileController::class,'viewseat'])->name('website.viewseat');
 
+//showpayment
+Route::get('/show/payment/',[PaymentController::class,'showpayment'])->name('website.showpayment');
+Route::post('/show/payment/process/{id}',[PaymentController::class,'paymentstore'])->name('website.paymentstore');
+
+
+//mealpayment
+Route::get('/meal/payment',[MealController::class,'mealpayment'])->name('website.mealpayment');
+Route::post('/meal/payment/method',[MealController::class,'mealstore'])->name('website.mealstore');
+
+
 
 
 

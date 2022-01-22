@@ -44,7 +44,7 @@
    @include('website.partials.header')
 
   <!-- ======= Hero Section ======= -->
-  <main id="main" style="position: relative;">
+  <main id="main" style="position: relative; padding-top:60px;">
 
    @yield('contents')
   <!-- ======= Footer ======= -->

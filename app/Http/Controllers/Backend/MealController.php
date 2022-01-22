@@ -49,6 +49,32 @@ class MealController extends Controller
         return redirect()->back(); 
 }
 
+
+
+public function mealpayment(){
+
+    return view('website.pages.mealpayment');
+}
+
+
+public function mealstore(Request $request){
+try{
+    Meal::create([
+        'amount'=>$request->amount,
+        'payment_date'=>$request->payment_date,
+        'payment_method'=>$request->payment_method,
+
+    ]);
+
+    return redirect()->route()-with('payment successful'); 
+}
+catch(Throwable $throw){
+
+    return redirect()->back()->with('error','payment unsuccessful!'); 
+}
+}
+
+
 public function meal_view($id){
     $meal=Meal::find($id);
 

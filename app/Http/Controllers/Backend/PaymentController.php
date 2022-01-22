@@ -20,6 +20,37 @@ class PaymentController extends Controller
         return view('admin.layouts.payment_form');
     }
 
+    public function showpayment(){
+        $payments = Payment::all();
+        return view('website.pages.showpayment',compact('payments'));
+    }
+
+
+    public function paymentstore(Request $request,$id){
+
+        $payments = Payment::find($id);
+try{
+        Payment::create([
+            'amount'=>$request->amount,
+            'payment_date'=>$request->payment_date,
+            'payment_method'=>$request->payment_method,
+
+        ]);
+
+        return redirect()->route()-with('payment successful'); 
+    }
+    catch(Throwable $throw){
+
+        return redirect()->back()->with('error','payment unsuccessful!'); 
+    }
+    }
+
+
+
+
+
+
+
     public function store(Request $request){
         Payment::create([
             

@@ -6,13 +6,13 @@
       <h3 class="m_3">Our Room Lists</h3>
       <div class="close_but"><i class="close1"> </i></div>
 <br>
-     <div class="card-header" style="text-align:center; background-color:blue" >Manage room for Student({{count($managerooms)}}room)</div>
+<div class="card-header" style="text-align:center; background-color:blue" >Manage room for Student({{count($managerooms)}}room)</div>
 <br>
             <div class="row">
                   @foreach($managerooms as $key=>$item)
         <div class="col-lg-4">
-        <div class="card" style="width: 18rem;">
-        <img src="{{url('/uploads/manageroom/'.$item->image)}}"  alt="room image">
+        <div class="card" style="width: 16rem; ">
+        <img src="{{url('/uploads/manageroom/'.$item->image)}}" style="height:160px; "  alt="room image">
   <div class="card-body">
     <h5 class="card-title">Room Name: {{$item->room_name}}</h5>
     <h5 class="card-title">Room Type: {{$item->room_type}}</h5>
