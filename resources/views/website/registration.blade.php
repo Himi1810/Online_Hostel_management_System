@@ -24,7 +24,7 @@
   <body>
   <body class="text-center">
     <div class="container" style="margin-left:300px; padding-right:400px;">
-<form action="{{route('registration.store')}}" method="POST" class="form-signin"> 
+<form action="{{route('registration.store')}}" method="POST" class="form-signin" enctype="multipart/form-data"> 
         @csrf
       <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
@@ -37,7 +37,7 @@
       <label for="inputName" class="sr-only">Enter your Address</label>
       <input name="address" type="text" id="inputname" class="form-control" placeholder="Address" required autofocus>
       <label for="inputName" class="sr-only">Enter your Nid</label>
-      <input name="nid" type="text" id="inputname" class="form-control" placeholder="Nid" required autofocus>
+      <input name="nid" type="number" id="inputname" class="form-control" placeholder="Nid" required autofocus>
 
       <label for="inputPhone_number" class="sr-only">Enter your Email</label>
       <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>

@@ -13,7 +13,7 @@
                              <p>Email:{{$employee->email}}</p>
                                 <p>Address: {{$employee->address}} </p>
                                <p>Image</p>
-                                  <img style="border-radius: 4px;" width="200px;" src=" {{url('/uploads/employee'.$employee->image)}}" alt=" image">
+                                  <img style="border-radius: 4px;" width="100px;" src=" {{url('/uploads/employee/'.$employee->image)}}" alt=" image">
                                     </p>
 
     

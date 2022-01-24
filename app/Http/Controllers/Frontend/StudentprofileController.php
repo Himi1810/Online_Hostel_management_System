@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Meal;
 
 
-
 use Illuminate\Http\Request;
 
 

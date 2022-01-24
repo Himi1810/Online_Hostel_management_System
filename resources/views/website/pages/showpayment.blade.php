@@ -1,6 +1,8 @@
 @extends('website.master')
 @section('contents')
 
+<div class="container" style="margin-left:300px; padding-right:600px;">
+
 <form action="{{route('website.showpayment')}}"method='post' >
     @csrf
 
@@ -18,13 +20,13 @@
     <label for="exampleInputEmail1" class="form-label">Enter Your Amount</label>
     <input type="number" name="amount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
-  <div class="mb-3">
+  <!-- <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your payment Date </label>
     <input type="date" name="payment_date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
+  </div> -->
   
   
-  <div class="mb-3">
+  <!-- <div class="mb-3">
   <div class="form-group">
     <label for="exampleFormControlSelect1">Enter Your Payment Method </label>
     <select name="payment_method" class="form-control" id="exampleFormControlSelect1">
@@ -33,7 +35,7 @@
       <option>Bank</option>
     </select>
   </div>
-</div>
+</div> -->
 
   
  

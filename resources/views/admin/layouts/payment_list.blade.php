@@ -26,6 +26,7 @@
                               <th>Amount</th>
                               <th>Payment Date</th>
                               <th>payment Status</th>
+                              <th>payment Method</th>
                               <th>Action</th>
                         
                               

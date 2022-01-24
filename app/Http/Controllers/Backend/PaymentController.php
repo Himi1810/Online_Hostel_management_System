@@ -21,19 +21,24 @@ class PaymentController extends Controller
     }
 
     public function showpayment(){
+
         $payments = Payment::all();
+
+
         return view('website.pages.showpayment',compact('payments'));
     }
 
 
     public function paymentstore(Request $request,$id){
 
+        // dd($request->all());
+
         $payments = Payment::find($id);
 try{
         Payment::create([
+            'student id'=>$request->student_id,
             'amount'=>$request->amount,
-            'payment_date'=>$request->payment_date,
-            'payment_method'=>$request->payment_method,
+            
 
         ]);
 
