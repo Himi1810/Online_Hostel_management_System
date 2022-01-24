@@ -47,7 +47,7 @@
                               <a class="btn btn-primary" href="{{route('userprofile.accept',$usertable->id)}}">Accept</a>
                               @endif
                               <a class="btn btn-success" href="{{route('userprofile.view',$usertable->id)}}">View</a>
-                              <a class="btn btn-danger" href="{{route('website.showpayment',$student->id)}}">Add Payment</a>
+                              <a class="btn btn-danger" href="{{route('website.showpayment',$usertable->id)}}">Payment</a>
                              
                               </td>
                               
