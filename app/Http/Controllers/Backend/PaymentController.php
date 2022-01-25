@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers\backend;
 
-use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Models\Payment;
+use App\Models\Roombooking;
+
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PaymentController extends Controller
 {
@@ -20,14 +23,24 @@ class PaymentController extends Controller
         return view('admin.layouts.payment_form');
     }
 
-    public function showpayment(){
+    // public function showpayment(){
 
+    //     $payments = Payment::all();
+
+
+    //     return view('website.pages.showpayment',compact('payments'));
+    // }
+
+    public function showpayform($id){
+// dd($id);
+        $roomBooking = Roombooking::find($id);
+        // dd($roomBooking);
+        $students = User::where('id',$roomBooking->student_id)->get();
+        // dd($students);
         $payments = Payment::all();
 
-
-        return view('website.pages.showpayment',compact('payments'));
+        return view('admin.layouts.showpay_form',compact('payments','roomBooking','payments'));
     }
-
 
     public function paymentstore(Request $request,$id){
 
@@ -38,6 +51,9 @@ try{
         Payment::create([
             'student id'=>$request->student_id,
             'amount'=>$request->amount,
+            'payment_date'=>$request->payment_date,
+            'payment_method'=>$request->payment_method,
+
             
 
         ]);
@@ -63,7 +79,7 @@ try{
 
             'amount'=>$request->amount,
             'payment_date'=>$request->payment_date,
-            'payment_status'=>$request->payment_status,
+           
             'payment_method'=>$request->payment_method,
 
 
@@ -113,7 +129,7 @@ if($payment){
         'student_id'=>$request->student_id,
             'amount'=>$request->amount,
             'payment_date'=>$request->payment_date,
-            'payment_status'=>$request->payment_status,
+            
             'payment_method'=>$request->payment_method,
 
 

@@ -113,8 +113,8 @@ Route::get('/student/profile/list',[StudentprofileController::class,'studentprof
 Route::get('/viewbookseat',[UserprofileController::class,'viewseat'])->name('website.viewseat');
 
 //showpayment
-Route::get('/show/payment/',[PaymentController::class,'showpayment'])->name('website.showpayment');
-Route::post('/show/payment/process/{id}',[PaymentController::class,'paymentstore'])->name('website.paymentstore');
+// Route::get('/show/payment/',[PaymentController::class,'showpayment'])->name('website.showpayment');
+// Route::post('/show/payment/process/{id}',[PaymentController::class,'paymentstore'])->name('website.paymentstore');
 
 
 //mealpayment
@@ -257,7 +257,9 @@ Route::get('/admin/payment/delete/{id}',[PaymentController::class,'payment_delet
 Route::get('/admin/payment/edit/{id}',[PaymentController::class,'payment_edit'])->name('payment.edit');
 Route::put('/admin/manageroom/update/{id}',[PaymentController::class,'payment_update'])->name('payment.update');
 
-
+//showpay
+Route::get('/show/payment/form/{id}',[PaymentController::class,'showpayform'])->name('admin.showpayment');
+Route::post('/show/payment/form/process/{id}',[PaymentController::class,'paymentstore'])->name('admin.paymentstore');
 
 
 

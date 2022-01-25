@@ -76,11 +76,11 @@ body{
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <img src="{{url('/uploads/student/',auth()->user()->image)}}" alt="Student" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4>{{auth()->user()->name}}</h4>
-                      <p class="text-secondary mb-1">{{auth()->user()->email}}</p>
-                      <p class="text-muted font-size-sm">{{auth()->user()->phone_number}}</p>
+                      <p class="text-secondary mb-1">Email: {{auth()->user()->email}}</p>
+                      <p class="text-muted font-size-sm">Phone Number :{{auth()->user()->phone_number}}</p>
                       <!-- <button class="btn btn-primary">Follow</button>
                       <button class="btn btn-outline-primary">Message</button> -->
                     </div>
@@ -97,7 +97,7 @@ body{
   <div class="col-md-1" >
   </div>
   <div class="col-md-10">
-  <form action="{{route('website.profile.booking',$room->id)}}"method='post'>
+  <form action="{{route('website.profile.booking',$room->id)}}"method='post' >
     @csrf
                 <div style="text-align:center;">
                        <h1>REQUEST fORM</h1>

@@ -23,7 +23,7 @@ class DashboardController extends Controller
     // dd($count->all());
 
             $student = User::where('role','student')->count();
-            // dd($student);
+         //dd($student);
             $employee = User::where('role','employee')->count();
             $hostel=Hostel::count();
             $room=Manageroom::count();

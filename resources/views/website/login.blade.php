@@ -22,10 +22,10 @@
   </head>
 
   <body class="text-center">
-  <div class="container" style="margin-left:400px; padding-right:700px;">
+  <div class="container" style="margin-left:400px; margin-top: 100px; padding-right:700px;">
     <form action="{{route('login.dologin')}}" method="POST" class="form-signin">
       @csrf
-      <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+      <!-- <img class="mb-4" src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
       <h1 class="h3 mb-3 font-weight-normal">Please Log in</h1>
       <label for="inputEmail" class="sr-only">Email address</label>
       <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>

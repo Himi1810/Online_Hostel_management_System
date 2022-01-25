@@ -19,10 +19,10 @@
     <input value="{{$payment->payment_date}}" type="date" name="payment_date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
-  <div class="mb-3">
+  <!-- <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your payment Status </label>
     <input value="{{$payment->payment_status}}" type="text" name="payment_status" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
+  </div> -->
   <div class="mb-3">
   <div class="form-group">
     <label for="exampleFormControlSelect1">Enter Your Payment Method </label>

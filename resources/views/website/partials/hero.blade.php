@@ -73,7 +73,7 @@
   </button>
 </div>
 
-<div style="position: absolute; top: 139px; left: 262px;">
-  <h1 style="color: white; font-weight: bold; "> Welcome to Online Hostel Management System </h1>
+<div style="position: absolute; top: 139px; left: 240px; right: 250px;">
+  <h1 style="color: white; font-weight: bold; text-align:center;"> Welcome to Online Hostel Management System </h1>
 
 </div>

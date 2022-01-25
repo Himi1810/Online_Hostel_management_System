@@ -19,7 +19,7 @@ class CreatePaymentsTable extends Migration
             $table->integer('amount');
             $table->integer('student_id');
             $table->date('payment_date');
-            $table->string('payment_status');
+           
             $table->string('payment_method');
             $table->timestamps();
         });
