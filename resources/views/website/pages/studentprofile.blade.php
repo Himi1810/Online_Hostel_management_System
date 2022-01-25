@@ -115,8 +115,6 @@ body{
                               <th>Meal History</th>
                               <th>Image</th>
                               
-                        
-                              
                           </tr>
                       </thead>
                      

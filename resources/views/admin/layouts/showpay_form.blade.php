@@ -3,7 +3,7 @@
 
 <div class="container" style="margin-left:300px; padding-right:600px;">
 
-<form action="{{route('admin.showpayment',$roomBooking->id)}}"method="post" >
+<form action="{{route('admin.paymentstore',$roomBooking->id)}}"method="post" >
     @csrf
 
     <div style="text-align:center;">

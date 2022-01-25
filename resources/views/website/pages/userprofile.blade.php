@@ -123,7 +123,7 @@ body{
   
  
   <button type="submit" class="btn btn-primary">Send Request</button>
-  <a class="btn btn-primary" href="{{route('website.viewseat')}}">View</a>
+  <a class="btn btn-primary" href="{{route('website.payprocess')}}">View</a>
 </form>
 </div>
   <div class="col-md-1">

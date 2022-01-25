@@ -114,7 +114,12 @@ Route::get('/viewbookseat',[UserprofileController::class,'viewseat'])->name('web
 
 //showpayment
 // Route::get('/show/payment/',[PaymentController::class,'showpayment'])->name('website.showpayment');
-// Route::post('/show/payment/process/{id}',[PaymentController::class,'paymentstore'])->name('website.paymentstore');
+
+
+
+//paymentprocess
+Route::get('payment/process/',[PaymentController::class,'payprocess'])->name('website.payprocess');
+
 
 
 //mealpayment

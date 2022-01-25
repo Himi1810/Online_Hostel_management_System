@@ -49,7 +49,7 @@ class PaymentController extends Controller
         $payments = Payment::find($id);
 try{
         Payment::create([
-            'student id'=>$request->student_id,
+            'student_id'=>$request->student_id,
             'amount'=>$request->amount,
             'payment_date'=>$request->payment_date,
             'payment_method'=>$request->payment_method,
@@ -58,7 +58,7 @@ try{
 
         ]);
 
-        return redirect()->route()-with('payment successful'); 
+        return redirect()->route('admin.dashboard')->with('payment successful'); 
     }
     catch(Throwable $throw){
 
@@ -68,6 +68,10 @@ try{
 
 
 
+    public function payprocess(){
+        $payments =payment::all();
+        return view('website.pages.payprocess',compact('payments'));
+    }
 
 
 
@@ -76,7 +80,6 @@ try{
         Payment::create([
             
             'student_id'=>$request->student_id,
-
             'amount'=>$request->amount,
             'payment_date'=>$request->payment_date,
            
