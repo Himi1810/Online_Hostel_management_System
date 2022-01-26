@@ -62,6 +62,7 @@ body{
     <div class="main-body">
     
           <!-- Breadcrumb -->
+          
           <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -106,20 +107,21 @@ body{
   <div class="mb-3">
    
   <div class="card-body">
-                  <table id="datatablesSimple">
-                      <thead>
-                          <tr>
-                              <th>Student ID</th>
-                              <th>Meal Category</th>
-                              <th>Meal Fee</th>
-                              <th>Meal History</th>
-                              <th>Image</th>
-                              
-                          </tr>
-                      </thead>
-                     
-                      <tbody>
-                      @foreach($meals as $meal)
+               
+
+                  <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Student ID</th>
+      <th scope="col">Meal Category</th>
+      <th scope="col">Meal Fee</th>
+      <th scope="col">Meal History</th>
+      <th scope="col">Image</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  @foreach($meals as $meal)
                           <tr>
                               <td>{{$meal->student_id}}</td>
                               <td>{{$meal->meal_category}}</td>
@@ -132,8 +134,9 @@ body{
                               
                           </tr>
                           @endforeach
-                      </tbody>
-                  </table>
+   
+  </tbody>
+</table>
               </div>
 
 </div>

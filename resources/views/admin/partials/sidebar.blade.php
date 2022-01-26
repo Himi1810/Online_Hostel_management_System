@@ -58,10 +58,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-users"></i></div>
                                 Visitor
                             </a>
-                            <a class="nav-link" href="{{route('admin.report')}}">
+                            <!-- <a class="nav-link" href="{{route('admin.report')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-bell"></i></div>
                                 Report
-                            </a>
+                            </a> -->
 
                             
 
@@ -84,7 +84,7 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
+                        <div class="small">Logged in as:{{auth()->user()->name}}</div>
                      
                     </div>
                 </nav>
