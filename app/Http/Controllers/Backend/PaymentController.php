@@ -34,28 +34,20 @@ class PaymentController extends Controller
     public function showpayform($id){
 // dd($id);
         $roomBooking = Roombooking::find($id);
-        // dd($roomBooking);
+        
         $students = User::where('id',$roomBooking->student_id)->get();
-        // dd($students);
 
-
-
-        $students = User::where('role','student')->orderBy('id','desc')->get();
-
-        $payments = Payment::all();
-
-
-
-        return view('admin.layouts.showpay_form',compact('payments','roomBooking','students'));
+        return view('admin.layouts.showpay_form',compact('roomBooking','students'));
     }
 
     public function paymentstore(Request $request,$id){
 
         // dd($request->all());
 
-        $payments = Payment::find($id);
+        $booking = Roombooking::find($id);
 try{
         Payment::create([
+            'roombooking_id'=>$booking->id,
             'student_id'=>$request->student_id,
             'amount'=>$request->amount,
             'payment_date'=>$request->payment_date,
@@ -76,7 +68,7 @@ try{
 
 
     public function payprocess(){
-        $payments =payment::all();
+        $payments =payment::where('student_id',auth()->user()->id)->get();
         return view('website.pages.payprocess',compact('payments'));
     }
 

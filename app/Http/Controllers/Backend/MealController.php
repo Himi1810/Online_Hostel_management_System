@@ -4,7 +4,7 @@ namespace App\Http\Controllers\backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
-
+use App\Models\Payment;
 use App\Models\Meal;
 
 use Illuminate\Http\Request;
@@ -38,9 +38,10 @@ class MealController extends Controller
         }
         Meal::create([
             'student_id'=>$request->student_id,
+
             'meal_category'=>$request->meal_category,
             'meal_fee'=>$request->meal_fee,
-            'meal_history'=>$request->meal_history,
+            
             'image'=>$filename
 
             
@@ -51,22 +52,27 @@ class MealController extends Controller
 
 
 
-public function mealpayment(){
+public function mealpayment($id){
 
-    return view('website.pages.mealpayment');
+    $students = User::where('role','student')->orderBy('id','desc')->get();
+        $meals = Meal::find($id);
+
+    return view('website.pages.mealpayment',compact('meals','students'));
 }
 
 
 public function mealstore(Request $request){
 try{
-    Meal::create([
+    Payment::create([
+        'student_id'=> auth()->user()->id,
+        'meal_id'=>$request->meal_id,
         'amount'=>$request->amount,
         'payment_date'=>$request->payment_date,
         'payment_method'=>$request->payment_method,
 
     ]);
 
-    return redirect()->route()-with('payment successful'); 
+    return redirect()->back()->with('payment successful'); 
 }
 catch(Throwable $throw){
 
@@ -112,9 +118,10 @@ $meal=Meal::find($id);
 if($meal){
     $meal->update([
         'student_id'=>$request->student_id,
+
         'meal_category'=>$request->meal_category,
         'meal_fee'=>$request->meal_fee,
-        'meal_history'=>$request->meal_history,
+       
 
 
     ]);

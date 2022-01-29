@@ -4,6 +4,19 @@
 
 
       <div class="container-fluid px-4">
+     
+      @if(session()->has('success'))
+        <div class="alert alert-success">
+            {!! session()->get('success') !!}
+        </div>
+@endif
+
+@if(session('error'))
+        <div class="alert alert-danger">
+            {!! session('error') !!}
+    </div>
+@endif
+
           <h1 class="mt-4">Employee List</h1>
           <a href="{{route('employee.form')}}" class="btn btn-success" style="float:right;">Add new</a>
           <ol class="breadcrumb mb-4">

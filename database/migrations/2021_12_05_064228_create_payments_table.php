@@ -19,7 +19,8 @@ class CreatePaymentsTable extends Migration
             $table->integer('amount');
             $table->integer('student_id');
             $table->date('payment_date');
-           
+            $table->integer('meal_id')->nullable();
+            $table->integer('roombooking_id')->nullable();
             $table->string('payment_method');
             $table->timestamps();
         });

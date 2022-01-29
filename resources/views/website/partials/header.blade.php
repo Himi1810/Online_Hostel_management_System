@@ -12,7 +12,7 @@
           <li>@auth<a class="nav-link scrollto" href="#about">About</a>@endauth</li>
           <li>@auth<a class="nav-link scrollto" href="{{route('website.services')}}">Services</a>@endauth</li>
           @if(auth()->user())
-          <li><a class="nav-link scrollto" href="{{route('employee.registration')}}">Employee Registration</a></li>
+          <!-- <li><a class="nav-link scrollto" href="{{route('employee.registration')}}">Employee Registration</a></li> -->
           <li><a class="nav-link scrollto" href="#">{{auth()->user()->name}}</a></li>
 
           <li><a class="nav-link scrollto" href="{{route('user.logout')}}">Log Out</a></li>

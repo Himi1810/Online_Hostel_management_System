@@ -23,7 +23,7 @@
 
     <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Amount</label>
-    <input type="number" name="amount" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <input type="number" name="amount" value={{$roomBooking->room->room_fee}} class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your payment Date </label>

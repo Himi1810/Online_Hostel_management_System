@@ -123,7 +123,7 @@ Route::get('payment/process/',[PaymentController::class,'payprocess'])->name('we
 
 
 //mealpayment
-Route::get('/meal/payment',[MealController::class,'mealpayment'])->name('website.mealpayment');
+Route::get('/meal/payment/{id}',[MealController::class,'mealpayment'])->name('website.mealpayment');
 Route::post('/meal/payment/method',[MealController::class,'mealstore'])->name('website.mealstore');
 
 

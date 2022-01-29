@@ -38,6 +38,8 @@
       <input name="address" type="text" id="inputname" class="form-control" placeholder="Address" required autofocus>
       <label for="inputName" class="sr-only">Enter your Nid</label>
       <input name="nid" type="number" id="inputname" class="form-control" placeholder="Nid" required autofocus>
+      <!-- <label for="inputName" class="sr-only">Enter your Institution Name</label>
+      <input name="institution_name" type="text" id="inputname" class="form-control" placeholder="Institution name" required autofocus> -->
 
       <label for="inputPhone_number" class="sr-only">Enter your Email</label>
       <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>

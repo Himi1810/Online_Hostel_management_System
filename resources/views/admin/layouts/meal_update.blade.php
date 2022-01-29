@@ -24,10 +24,10 @@
     <input  value="{{$meal->meal_fee}}" type="number" name="meal_fee" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
   
-  <div class="mb-3">
+  <!-- <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Meal History </label>
     <input  value="{{$meal->meal_history}}" type="text" name="meal_history" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
+  </div> -->
   
 
   

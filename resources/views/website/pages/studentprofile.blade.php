@@ -101,7 +101,8 @@ body{
   <div class="col-md-1" >
   </div>
   <div class="col-md-10">
-
+  <div id="divToPrint">
+<div style="text-align:center;">
                        <h1>Meal List</h1>
  
   <div class="mb-3">
@@ -115,7 +116,7 @@ body{
       <th scope="col">Student ID</th>
       <th scope="col">Meal Category</th>
       <th scope="col">Meal Fee</th>
-      <th scope="col">Meal History</th>
+      
       <th scope="col">Image</th>
 
     </tr>
@@ -126,12 +127,18 @@ body{
                               <td>{{$meal->student_id}}</td>
                               <td>{{$meal->meal_category}}</td>
                               <td>{{$meal->meal_fee}}</td>
-                              <td>{{$meal->meal_history}}</td>
+                              
                               <td>
                                   <img width="70px" src="{{url('/uploads/meal/'.$meal->image)}}" alt="">
                               </td>
-                              
-                              
+                         <td>
+                              <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
+</td>
+
+</div>
+
+</div>
+                          
                           </tr>
                           @endforeach
    
@@ -143,3 +150,13 @@ body{
   
 
     @endsection
+
+    <script language="javascript">
+    function PrintDiv(divName) {
+        var printContents = document.getElementById(divName).innerHTML;
+        var originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+</script>

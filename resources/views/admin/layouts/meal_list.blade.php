@@ -25,7 +25,7 @@
                               <th>Student ID</th>
                               <th>Meal Category</th>
                               <th>Meal Fee</th>
-                              <th>Meal History</th>
+                             
                               <th>Image</th>
                               <th>Action</th>
                               
@@ -35,10 +35,12 @@
                       <tbody>
                       @foreach($meals as $meal)
                           <tr>
-                              <td>{{$meal->student_id}}</td>
+                              
+                          <td>{{$meal->student_id}}</td>
+
                               <td>{{$meal->meal_category}}</td>
                               <td>{{$meal->meal_fee}}</td>
-                              <td>{{$meal->meal_history}}</td>
+                             
                               <td>
                                   <img width="70px" src="{{url('/uploads/meal/'.$meal->image)}}" alt="">
                               </td>

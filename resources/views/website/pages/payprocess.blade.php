@@ -40,8 +40,9 @@
                               <td>{{$payment->amount}}</td>
                               <td>{{$payment->payment_date}}</td>
                               <td>{{$payment->payment_method}}</td>
-                              
+                              <td>
                               <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
+                              </td>
 
     </div>
 
@@ -54,7 +55,7 @@
   </tbody>
 
 </table>
-              </div>
+             
           </div>
       </div>
       

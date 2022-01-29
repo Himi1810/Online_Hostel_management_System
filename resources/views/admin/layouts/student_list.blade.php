@@ -41,7 +41,7 @@
                               <td>{{$student->email}}</td>
                               <td>{{$student->address}}</td>
                               <td>
-                                  <img width="100px" src="{{url('/uploads/student/'.$student->image)}}" alt="">
+                                  <img width="70px" src="{{url('/uploads/student/'.$student->image)}}" alt="">
                               </td>
                               <td>
                               <a class="btn btn-primary" href="{{route('student.view',$student->id)}}">View</a>
