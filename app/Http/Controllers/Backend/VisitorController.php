@@ -33,7 +33,7 @@ class VisitorController extends Controller
             'phone_number'=>$request->phone_number,
             
             'nid'=>$request->nid,
-            'relation'=>$request->relation,
+            
             'image'=>$filename,
 
         
@@ -84,7 +84,7 @@ if($visitor){
             'phone_number'=>$request->phone_number,
             
             'nid'=>$request->nid,
-            'relation'=>$request->relation,
+            
             // 'image'=>$filename,
 
        

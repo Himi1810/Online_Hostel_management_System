@@ -21,10 +21,10 @@
     <label for="exampleInputEmail1" class="form-label">Enter Your Phone Number</label>
     <input type="number" name="phone_number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
-  <div class="mb-3">
+  <!-- <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Enter Your Relation</label>
     <input type="text" name="relation" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-  </div>
+  </div> -->
 
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Photo</label>

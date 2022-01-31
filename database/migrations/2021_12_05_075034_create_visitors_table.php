@@ -19,7 +19,7 @@ class CreateVisitorsTable extends Migration
             $table->integer('nid');
             $table->string('address');
             $table->integer('phone_number');
-            $table->string('relation');
+            
             $table->string('image')->nullable();
            
             $table->timestamps();

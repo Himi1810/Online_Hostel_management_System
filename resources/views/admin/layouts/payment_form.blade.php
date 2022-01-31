@@ -26,9 +26,8 @@
   <div class="form-group">
     <label for="exampleFormControlSelect1">Enter Your Payment Method </label>
     <select name="payment_method" class="form-control" id="exampleFormControlSelect1">
-      <option>Bkash</option>
-      <option>Rocket</option>
-      <option>Bank</option>
+      <option>Cash On</option>
+      
     </select>
   </div>
 </div>

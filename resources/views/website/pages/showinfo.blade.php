@@ -7,7 +7,7 @@
       <div class="close_but"><i class="close1"> </i></div>
       
 
-            <div class="row">
+            <div class="row" style="margin-left: 266px; margin-top: 30px;">
                   @foreach($hostels as $key=>$item)
         <div class="col-lg-4">
         <div class="card" style="width: 16rem;">

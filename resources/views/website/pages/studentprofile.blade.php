@@ -100,6 +100,7 @@ body{
                   <div class="row" style="margin-top:100px">
   <div class="col-md-1" >
   </div>
+  
   <div class="col-md-10">
   <div id="divToPrint">
 <div style="text-align:center;">
@@ -132,7 +133,6 @@ body{
                                   <img width="70px" src="{{url('/uploads/meal/'.$meal->image)}}" alt="">
                               </td>
                          <td>
-                              <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
 </td>
 
 </div>
@@ -145,6 +145,8 @@ body{
   </tbody>
 </table>
               </div>
+              <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
+
 
 </div>
   

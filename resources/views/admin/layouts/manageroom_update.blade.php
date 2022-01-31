@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('main')
 
-<form action="{{route('manageroom.update',$manageroom->id)}}"method='post' >
+<form action="{{route('manageroom.update',$manageroom->id)}}" method='post' >
     @csrf
     @method('put')
     <div class="mb-3">

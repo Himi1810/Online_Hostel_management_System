@@ -41,7 +41,6 @@
                               <td>{{$payment->payment_date}}</td>
                               <td>{{$payment->payment_method}}</td>
                               <td>
-                              <input class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print">
                               </td>
 
     </div>
@@ -57,6 +56,8 @@
 </table>
              
           </div>
+          <center>
+              <input  style="width:300px;"class="btn btn-primary" type="button" onClick="PrintDiv('divToPrint');" value="Print"></center>
       </div>
       
 

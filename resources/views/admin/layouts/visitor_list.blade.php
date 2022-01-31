@@ -25,7 +25,7 @@
                               <th>Name</th>
                               <th>Nid</th>
                               <th>Phone Number</th>
-                              <th>Relation</th>
+                             
                               <th>Address</th>
                               <th>Image</th>
                               <th>Action</th>
@@ -39,7 +39,7 @@
                               <td>{{$visitor->name}}</td>
                               <td>{{$visitor->nid}}</td>
                               <td>{{$visitor->phone_number}}</td>
-                              <td>{{$visitor->relation}}</td>
+                             
                               <td>{{$visitor->address}}</td>
                               <td>
                               <img width="100px" src="{{url('/uploads/visitor/'.$visitor->image)}}" alt="">

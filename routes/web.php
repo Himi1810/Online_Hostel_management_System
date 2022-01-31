@@ -218,7 +218,7 @@ Route::post('/manage-room/store',[ManageroomController::class,'store'])->name('m
 Route::get('/admin/manageroom/view/{id}',[ManageroomController::class,'manageroom_view'])->name('manageroom.view');
 Route::get('/admin/manageroom/delete/{id}',[ManageroomController::class,'manageroom_delete'])->name('manageroom.delete');
 Route::get('/admin/manageroom/edit/{id}',[ManageroomController::class,'manageroom_edit'])->name('manageroom.edit');
-Route::put('/admin/manageroom/update/{id}',[ManageroomController::class,'mangeroom_update'])->name('manageroom.update');
+Route::put('/admin/manage/room/update/{id}',[ManageroomController::class,'mangeroom_update'])->name('manageroom.update');
 Route::get('/room/hostelroom/{id}',[ShowroomController::class,'hostelWiseRoom'])->name('manageroom.hostelroom');
 
 

@@ -24,7 +24,7 @@ class EmployeeController extends Controller
              $filename = date('Ymdhms').'.'.$file->getClientOriginalExtension();
              $file->storeAs('/uploads/employee',$filename);
          }
-         try{
+         
         Employee::create([
             'name'=>$request->name,
             'nid'=>$request->nid,
@@ -35,11 +35,11 @@ class EmployeeController extends Controller
 
         ]);
 
-        return redirect()->route('admin.employee')->with('success','updated!');
-    }
-    catch(Thrrowable $throw){
-        return redirect()->back()->with('error','error!'); 
-    }
+        
+    
+   
+        return redirect()->back(); 
+    
 }
 
     public function employee_view($id){
