@@ -5,7 +5,7 @@
 
       <div class="container-fluid px-4">
           <h1 class="mt-4">Student List</h1>
-          <a href="{{route('student.form')}}" class="btn btn-success" style="float:right;">Add new</a>
+          <a href="{{route('student.form')}}" class="btn btn-success" style="float:right;">Add</a>
           <ol class="breadcrumb mb-4">
               <!-- <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li> -->
               <li class="breadcrumb-item active">Tables</li>

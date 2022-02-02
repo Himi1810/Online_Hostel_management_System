@@ -80,7 +80,7 @@ body{
                     <img src="{{url('/uploads/student/',auth()->user()->image)}}" alt="student image" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4>{{auth()->user()->name}}</h4>
-                      <p class="text-secondary mb-1">{{auth()->user()->email}}</p>
+                      <p class="text-secondary mb-1">Email: {{auth()->user()->email}}</p>
                       <p class="text-muted font-size-sm">Phone: {{auth()->user()->phone_number}}</p>
                       <p class="text-muted font-size-sm">Address: {{auth()->user()->address}}</p>
                       <p class="text-muted font-size-sm">Nid: {{auth()->user()->nid}}</p>
